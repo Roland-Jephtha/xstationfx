@@ -1,0 +1,1872 @@
+{% load static %}
+
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="title" content="XstationFX - Best Online Trading Platform" />
+    <meta name="description" content="XstationFX - the most convenient online trading interface. &lt;br> Instant access to trade options more than 150 assets of currencies, cryptocurrencies and companies shares." />
+    <meta name="keywords" content="online trading service on financial markets" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta property="og:url" content="en//Home/Index" />
+    <meta property="og:title" content="XstationFX - Best Online Trading Platform" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="XstationFX broker" />
+    <meta property="og:image" content="img/logo_dark.png" />
+    <meta property="og:image:secure_url" content="img/logo_dark.png" />
+    <link rel="shortcut icon" type="image/png" href="images/fav.png" />
+    <link rel="stylesheet" media="all" href="{% static 'css/bootstrap.min7eda.css' %}" />
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" media="all" href="{% static 'css/fontawesome.min7eda.css' %}" />
+    <link rel="stylesheet" media="all" href="{% static 'css/flaticon7eda.css' %}" />
+    <link rel="stylesheet" media="all" href="{% static 'css/owl.carousel.min7eda.css' %}" />
+    <link rel="stylesheet" media="all" href="{% static 'css/owl.theme.default.min7eda.css' %}" />
+    <link rel="stylesheet" media="all" href="{% static 'css/slicknav7eda.css' %}" />
+    <link rel="stylesheet" media="all" href="{% static 'css/style7eda3860.css' %}" />
+    <link rel="stylesheet" media="all" href="{% static 'css/responsive7eda.css' %}" />
+    <link rel="stylesheet" media="all" href="{% static 'css/custom7eda.css' %}" />
+    <link href="{% static 'css/Components/ajax-progress.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/tree-child.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/autocomplete-loading.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/clearfix.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/container-inline.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/details.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/fieldgroup.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/hidden.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/item-list.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/js.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/nowrap.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/position-container.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/progress.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/reset-appearance.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/resize.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/sticky-header.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/system-status-counter7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/system-status-report-counters7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/system-status-report-general-info7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/tabledrag.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/Components/tablesort.module7eda.css' %}" rel="stylesheet" type="text/css" />
+    <script src="{% static 'js/assets/jquery-3.3.1.min7eda.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <style type="text/css">
+        .trans {
+            display: none;
+            width: 150px;
+            position: absolute;
+            z-index: 9999;
+            top: 25px;
+            left: -webkit-calc(60%);
+            left: -moz-calc(60%);
+            left: calc(60%);
+        }
+
+        .setP {
+            display: none;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        @media(max-width:760px) {
+            .trans {
+                left: 25%;
+                top: 75px;
+            }
+            .setP {
+                display: block;
+                position: fixed;
+                top: 145px;
+                z-index: 9999999;
+                right: 155px;
+            }
+            .mobile {
+                display: block;
+                position: absolute;
+                top: 25%;
+                right: 70px;
+            }
+        }
+
+        .tranToggle {}
+    </style>
+
+
+    <meta name="theme-color" content="#0a3041">
+
+    <style type="text/css">
+        .login_area {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -10px;
+        }
+
+        @media(max-width:760px) {
+            .login_area {
+                margin-top: 5px;
+            }
+        }
+
+        .login_area ul {
+            display: flex;
+            width: max-content;
+        }
+
+        .login_area ul li {
+            margin-left: 10px;
+        }
+
+        .bonus_area {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            width: 180px;
+            border-radius: 5px 0 0 5px;
+            z-index: 99999998;
+            -webkit-transform: translateY(-50%) translateX(100%);
+            -ms-transform: translateY(-50%) translateX(100%);
+            transform: translateY(-50%) translateX(100%);
+            -webkit-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        @media(max-width:760px) {
+            .bonus_area {
+                width: 150px;
+            }
+        }
+
+        .bonus_area.show {
+            -webkit-transform: translateY(-50%) translateX(0%);
+            -ms-transform: translateY(-50%) translateX(0%);
+            transform: translateY(-50%) translateX(0%);
+            -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .bonus_area .inner_area {
+            background: -webkit-gradient(linear, left top, left bottom, from(#5d84e3), to(#080f20));
+            background: -webkit-linear-gradient(top, #0a3041 0%, #06415c 100%);
+            background: -o-linear-gradient(top, #0a3041 0%, #06415c 100%);
+            background: linear-gradient(to bottom, #0a3041 0%, #06415c 100%);
+            border-radius: 5px 0 0 0;
+            padding: 18px 0 23px;
+            position: relative;
+            text-align: center;
+        }
+
+        .bonus_area .inner_area .icon {
+            display: block;
+            padding-left: 33px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .inner_area .close-btn {
+            position: absolute;
+            cursor: pointer;
+            height: 20px;
+            background: none;
+            outline: none;
+            border: none;
+            z-index: 30;
+            top: 28px;
+            width: 10px;
+            height: 15px;
+            right: 20px;
+        }
+
+        .inner_area .title {
+            display: block;
+            font-size: 23px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 0px !important;
+        }
+
+        .inner_area .price {
+            display: block;
+            padding-bottom: 6px;
+            color: #fff;
+            font-size: 38px;
+            margin-left: -14px;
+            line-height: 40px;
+        }
+
+        .inner_area .price em {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 19px;
+            vertical-align: top;
+            font-weight: normal;
+            font-style: normal;
+            padding-top: 10px;
+            padding-right: 4px;
+        }
+
+        .inner_area .subtitle {
+            display: block;
+            text-transform: uppercase;
+            font-size: 10px;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 5px;
+            font-size: 14px;
+        }
+
+        .bonus_area .get-btn {
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            background-color: #0d3f57;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0 20px;
+            border-radius: 0 0 0 5px;
+        }
+
+        .bonus_area .get-btn:hover {
+            background: #0a3041;
+            text-decoration: none;
+            color: #fff;
+            -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .global-close-btn:before,
+        .global-close-btn:after {
+            content: "";
+            display: block;
+            clear: both;
+            height: 2px;
+            background-color: #fff;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            left: 0;
+            width: 135%;
+            top: 0;
+            margin-top: 8px;
+            margin-left: -3px;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .global-close-btn:after {
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .mypop {
+            position: fixed;
+            left: 10px;
+            bottom: 30px;
+            background: #f5f6f6;
+            border: 1px solid #0d3f57;
+            border-radius: 4px;
+            width: fit-content;
+            z-index: 999;
+            padding: 5px 10px 5px 10px;
+            -webkit-transform: translateY(-50%) translateX(-120%);
+            -ms-transform: translateY(-50%) translateX(-120%);
+            transform: translateY(-50%) translateX(-120%);
+            -webkit-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        .mypop.show {
+            -webkit-transform: translateY(-50%) translateX(0%);
+            -ms-transform: translateY(-50%) translateX(0%);
+            transform: translateY(-50%) translateX(0%);
+            -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .mypop .mymsg {
+            color: #000;
+            font-size: 15px;
+        }
+
+        .mypop a {
+            text-align: center;
+            color: #403c3c;
+            text-decoration: none;
+            display: block;
+            border-radius: 4px;
+            font-size: 15px;
+            line-height: 12px;
+            padding: 4px 8px;
+            background-color: rgba(48, 153, 245, .3);
+            border: 1px solid #3099f5;
+        }
+
+        .mypop .close {
+            float: right;
+            cursor: pointer;
+        }
+
+        .mypop .close i {
+            color: red;
+            font-size: 15px;
+        }
+
+        @media(max-width:760px) {
+            .mypop {
+                bottom: 35px;
+                width: 95%;
+            }
+        }
+
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
+
+        .goog-te-combo {
+            background-color: transparent;
+            background-image: url(img/translator.png);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center left;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+            color: #cac4c4;
+            font-size: 15px;
+            padding-left: 24px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 130px;
+        }
+
+        div#google_translate_element {
+            height: 30px;
+            overflow: hidden;
+        }
+    </style>
+
+    <title>Home - XstationFX</title>
+    <script src="{% static 'js/jquery.waypoints.js' %}" type="text/javascript"></script>
+    <style type="text/css">
+        img.img-fluid.curve-img {
+            width: 60px;
+        }
+
+        .curve {
+            background: #ffffff;
+            padding: 20px;
+        }
+    </style>
+
+    <title>
+
+    </title>
+</head>
+
+<body id="body" class="toolbar-themes toolbar-no-tabs toolbar-no-icons toolbar-themes-admin-theme--seven path-node page-node-type-full-page">
+    <!-- preloader section start -->
+    <div class="loader-container">
+        <div class="loader">
+            <h1 style="color: white;">XstationFX</h1>
+            <!-- <img src="{% static 'img/logo_light.png' %}" alt="preloader" /> -->
+
+        </div>
+    </div>
+    <!-- preloader section end -->
+
+
+
+    <div class="mypop">
+        <div class="close">
+            <i class="fa fa-times"></i>
+        </div>
+        <div class="mymsg">
+            <p>
+                <b id="UserID"></b> has successfully <span id="type"></span> <b id="amount"></b>
+            </p>
+            <p class="text-right text-gray-dark" id="time"></p>
+            <a href="" class="btn">Join Now</a>
+        </div>
+
+    </div>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+                Skip to main content
+            </a>
+
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+
+        <!--   header area start   -->
+        <div class="header-area header-absolute">
+            <div class="container">
+                <div class="support-bar-area">
+                    <div class="row">
+                        <div class="col-lg-6 support-contact-info">
+                            <div>
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg text-center">
+                            <div>
+                                <div id="block-headertopright">
+
+
+
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg">
+                            <div class="login_area">
+                                <ul>
+                                    <li>
+                                        <div id="google_translate_element"></div>
+                                    </li>
+                                    <li><a href="{% url 'signup' %}" class="btn btn-success"><i
+                                                        class="fa fa-user"></i>Sign Up</a></li>
+                                    <li><a href="{% url 'signin' %}" class="btn btn-outline-success"><i
+                                                        class="fa fa-key"></i>Login</a></li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-navbar">
+                    <div class="row">
+                        <div class="col-lg-2 col-6">
+                            <div class="logo-wrapper">
+                                <div>
+
+
+
+
+                                    <a href="{% url 'home' %}" title="Home" rel="home">
+                                                <!-- <img src="{% static 'img/logo_light.png' %}" id="logo" alt="Home" /> -->
+
+                                               <h1 style="color: white;">XstationFX</h1> 
+                                            </a>
+
+
+
+
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-6 text-right position-static">
+                            <div>
+                                <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation">
+
+                                    <h2 class="visually-hidden" id="block-mainnavigation-menu">Main navigation
+                                    </h2>
+
+
+
+                                    <ul class="main-menu" id="mainMenu">
+                                        <li>
+                                            <a href="{% url 'home' %}">Home </a>
+
+
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'about' %}" data-drupal-link-system-path="node/21">About
+                                                        Us</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="{% url 'assets' %}">Trading Assets </a>
+
+
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'faq' %}">FAQ </a>
+
+
+                                        </li>
+                                
+                                        <li>
+                                            <a href="{% url 'contact' %}" data-drupal-link-system-path="contact">contact</a>
+                                        </li>
+                                    </ul>
+
+
+
+                                </nav>
+
+                            </div>
+
+                            <div id="mobileMenu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--   header area end   -->
+
+
+
+
+        <a id="main-content"></a>
+        <div>
+            <div id="block-finlance-page-title">
+
+
+
+                <h1><span>Home</span>
+                </h1>
+
+
+            </div>
+            <div id="block-finlance-content">
+
+
+                <article data-history-node-id="32" role="article" about="/D8/finlance/home2">
+
+
+
+
+                    <footer>
+                        <article typeof="schema:Person" about="/D8/finlance/user/1">
+                        </article>
+
+                        <div>
+                            Submitted by <span><span lang="" about="/D8/finlance/user/1" typeof="schema:Person"
+                                            property="schema:name" datatype="">admin</span></span>
+                            on <span>Sat, 03/28/2020 - 14:45</span>
+
+                        </div>
+                    </footer>
+
+                    <div>
+
+                        <div class="paragraph paragraph--type--block paragraph--view-mode--default">
+                            <div class="hero-area hero2-carousel owl-carousel owl-theme">
+                                <div class="hero-bg-2">
+                                    <div class="container">
+                                        <div class="hero-txt">
+                                            <div class="row">
+                                                <div class="col-12"><span>Start trading with a broker you can
+                                                                trust</span>
+                                                    <h1>Want to get a reliable and profitable source of real net income?
+                                                    </h1>
+                                                    <a class="hero-boxed-btn" href="signup.html">Get Started</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hero-area-overlay"> </div>
+                                </div>
+
+                                <div class="hero-bg-3">
+                                    <div class="container">
+                                        <div class="hero-txt">
+                                            <div class="row">
+                                                <div class="col-12"><span class="text-capitalize">AWARD WINING
+                                                                IN TRADING EDUCATION</span>
+
+                                                    <h1>Learn from the BEST and become a PROFESSIONAL using our online courses.</h1>
+                                                    <a class="hero-boxed-btn" href="/Home/About">Learn more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hero-area-overlay"> </div>
+                                </div>
+
+                                <div class="hero-bg">
+                                    <div class="container">
+                                        <div class="hero-txt">
+                                            <div class="row">
+                                                <div class="col-12"><span class="text-capitalize">THE PLACE TO
+                                                                TRADE AND WIN</span>
+
+                                                    <h1>Register Now And Get A $100 Bonus Instantly.</h1>
+                                                    <a class="hero-boxed-btn" href="signup.html">Register
+                                                                Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hero-area-overlay"> </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="paragraph paragraph--type--block paragraph--view-mode--default">
+                            <div class="intro-section">
+                                <div class="container">
+                                    <div class="hero-features">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-6 single-hero-feature">
+                                                <div class="outer-container">
+                                                    <div class="inner-container">
+                                                        <div class="icon-wrapper">
+                                                            <i class="fa fa-flaticon-check-mark"></i>
+                                                        </div>
+                                                        <h3>Trusted & Regulated
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 single-hero-feature">
+                                                <div class="icon-wrapper">
+                                                    <i class="fa fa-flaticon-wallet"></i>
+                                                </div>
+                                                <h3>Fast Deposit & Withdraw
+                                                </h3>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 single-hero-feature">
+                                                <div class="icon-wrapper">
+                                                    <i class="fa fa-flaticon-chart"></i>
+                                                </div>
+                                                <h3>Risk Manegment</h3>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 single-hero-feature">
+                                                <div class="icon-wrapper">
+                                                    <i class="fa fa-flaticon-chat"></i>
+                                                </div>
+                                                <h3>24/7 Customer Support</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 pr-0">
+                                            <div class="intro-txt">
+                                                <h2 class="section-summary">LEARN TO TRADE</h2>
+                                                <p> <span class="section-title"><i
+                                                                    class="fa fa-dot-circle"></i><b>LIVE SEMINARS &
+                                                                    TRAINING</b> for traders.</span></p>
+                                                <p><span class="section-title"><i
+                                                                    class="fa fa-dot-circle"></i><b>TUTORIALS &
+                                                                    SEMINARS</b> on Basic, Intermediary and
+                                                                Advanced.</span></p>
+                                                <p> <span class="section-title"><i
+                                                                    class="fa fa-dot-circle"></i><b>BECOME AN EXPACT</b>
+                                                                in the trading world in just a short time.</span></p>
+                                                <a href="/Home/About" class="intro-btn"><span>what we
+                                                                do</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 pl-lg-0 px-md-3 px-0">
+                                            <div class="intro-bg"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="conditions">
+                            <div class="conditions__in">
+                                <h2 class="title">
+                                    <span class="title__text">Place your trades on best conditions</span>
+                                </h2>
+                                <ul>
+                                    <li>
+                                        <p><i data-speed="3000" id="emi" data-from="0" data-to="5">0</i>+</p>
+                                        <span>Years on the market</span>
+                                    </li>
+                                    <li>
+                                        <p><i data-speed="3000" data-from="0" data-to="10000" id="emi2">0</i>+
+                                        </p>
+                                        <span>active clients</span>
+                                    </li>
+                                    <li>
+                                        <p><i data-speed="2000" data-from="0" data-to="30000" id="emi3">0</i>+
+                                        </p>
+                                        <span>withdrawals</span>
+                                    </li>
+
+                                    <li>
+                                        <p><i data-speed="2400" data-from="0" data-to="500" id="emi4">0</i>+</p>
+                                        <span>events</span>
+                                    </li>
+                                    <li>
+                                        <p><i data-from="0" data-speed="2000" id="emi5" data-to="100">0</i>+</p>
+                                        <span>Assets for trading</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                        <!-- HOW IT WORK SECTION START  -->
+
+                        <div id="conditions_area" class="section-full  p-t80 p-b80 bg-gray">
+                            <div class="container">
+                                <!-- TITLE START-->
+                                <div class="section-head text-center">
+                                    <span class="wt-title-subline font-16 text-gray-dark m-b15">Three steps to
+                                                Invest</span>
+                                    <h2 class="text-uppercase">How It Works</h2>
+                                    <div class="wt-separator-outer">
+                                        <div class="wt-separator bg-success"></div>
+                                    </div>
+                                    <p>To start trading, fund your account with reliable payment channels and withdraw quickly with the fastest payout methods.</p>
+                                </div>
+                                <!-- TITLE END-->
+                                <div class="section-content no-col-gap">
+                                    <div class="row">
+
+                                        <!-- COLUMNS 1 -->
+                                        <div class="col-md-4 col-sm-4 step-number-block">
+                                            <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
+                                                <div class="icon-lg m-b20" style="color: #0a3041!important;">
+                                                    <i class="fa fa-user-plus fa-5x"></i>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <div class="step-number">1</div>
+                                                    <h4 class="wt-tilte text-uppercase font-weight-500">Create an Account</h4>
+                                                    <p>Your first step to financial freedom is by creating an account with us.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- COLUMNS 2 -->
+                                        <div class="col-md-4 col-sm-4 step-number-block">
+                                            <div class="wt-icon-box-wraper  p-a30 center bg-secondry m-a5 ">
+                                                <div class="icon-lg m-b20" style="color: #ffffff!important;">
+                                                    <i class="fa fa-briefcase fa-5x"></i>
+                                                </div>
+                                                <div class="icon-content text-white">
+                                                    <div class="step-number active">2</div>
+                                                    <h4 class="wt-tilte text-uppercase font-weight-500 text-white">
+                                                        Choose a package</h4>
+                                                    <p>Start investing by choosing a package that suits your budget/trading strategies and easily make deposits with reliable payment channels.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- COLUMNS 3 -->
+                                        <div class="col-md-4 col-sm-4 step-number-block">
+                                            <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
+                                                <div class="icon-lg m-b20" style="color: #0a3041!important;">
+                                                    <i class="fa fa-dollar fa-5x"></i>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <div class="step-number">3</div>
+                                                    <h4 class="wt-tilte text-uppercase font-weight-500">Trade
+                                                    </h4>
+                                                    <p>Once deposit is confirmed, trades can immediately be placed with instant live updates.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="centered-area"><a href="signup.html" class="hero-boxed-btn-s">Get Started</a></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- HOW IT WORK  SECTION END -->
+
+                        <script>
+                            function Counter(selector) {
+                                var self = this;
+
+                                //get all props from element
+                                this.elem = document.querySelector(selector);
+                                this.from = parseInt(this.elem.getAttribute('data-from') || 100);
+                                this.to = parseInt(this.elem.getAttribute('data-to') || 1000);
+                                this.refreshInterval = parseInt(this.elem.getAttribute('data-refresh-interval') || 50);
+                                this.speed = parseInt(this.elem.getAttribute('data-speed') || 5000);
+
+
+                                //start counter
+                                //if restart(int) is provided
+                                //restart counter after finishing with timeout
+                                this.start = function(restart) {
+                                    //base logic, can be improved
+                                    var diff = self.to - self.from;
+                                    var steps = self.speed / self.refreshInterval;
+                                    var step = diff / steps;
+                                    var i = 1;
+                                    var interval = setInterval(function() {
+                                        var change = step * i;
+                                        if (change <= self.to) {
+                                            self.elem.textContent = Math.round(change);
+                                            i++;
+                                        } else {
+                                            self.elem.textContent = Math.round(self.to)
+                                            clearInterval(interval);
+                                            //try to restart counter
+                                            if (restart && restart > 0) {
+                                                setTimeout(function() {
+                                                    self.start(restart);
+                                                }, restart);
+                                            }
+                                        }
+                                    }, self.refreshInterval);
+                                }
+                            }
+
+                            $('#conditions_area').waypoint(function() {
+                                //example1
+                                var counter = new Counter('#emi');
+                                //restart after 2000ms
+                                counter.start(0);
+
+
+
+                                //example2
+                                var counter2 = new Counter('#emi2');
+                                //dont restart
+                                counter2.start(0);
+
+                                var counter3 = new Counter('#emi3');
+                                //dont restart
+                                counter3.start(0);
+
+                                var counter4 = new Counter('#emi4');
+                                //dont restart
+                                counter4.start(0);
+
+                                var counter5 = new Counter('#emi5');
+                                //dont restart
+                                counter5.start(0);
+                            }, {
+                                offset: '100%'
+                            });
+                        </script>
+
+                        <div class="paragraph paragraph--type--block paragraph--view-mode--default">
+                            <div class="approach-section">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="approach-summary">
+                                                <span class="section-title">WHY CHOOSE FOREX AND BITCOIN
+                                                            TRADE?</span>
+                                                <h6 class="section-summary">Cryptocurrencies are a borderless means of exchange allowing for instant and cost-effective transactions across the world. There is no waiting, no international fees and no limitations as to who can or cannot
+                                                    send funds to whom or when and where those funds can be accessed.</h6>
+                                                <a href="/Home/About" class="boxed-btn"><span>Trading
+                                                                Assets</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <ul class="approach-lists">
+                                                <li class="single-approach">
+                                                    <div class="approach-icon-wrapper"><i class="fa fa-bar-chart"></i></div>
+                                                    <div class="approach-text">
+                                                        <h4>INSTANT TRADING</h4>
+                                                        <p>Deposit is confirmed immediately after successful transaction to fund the account and trading can start instantly.</p>
+                                                    </div>
+                                                </li>
+                                                <li class="single-approach">
+                                                    <div class="approach-icon-wrapper"><i class="fa fa-key"></i>
+                                                    </div>
+                                                    <div class="approach-text">
+                                                        <h4>SAFE AND SECURE</h4>
+                                                        <p>Encryption of account is taking to a high degree for best secure protection.</p>
+                                                    </div>
+                                                </li>
+                                                <li class="single-approach">
+                                                    <div class="approach-icon-wrapper"><i class="fa fa-briefcase"></i></div>
+                                                    <div class="approach-text">
+                                                        <h4>BITCOIN TRANSACTION</h4>
+                                                        <p>We accept payment in Bitcoin. Register, get $100 sign-up bonus.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p class="m-5 text-center text-capitalize">Funds are segregated from companies personal account/wallet.</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="curve">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center"><img src="{% static 'img/icons/icon-usp-secure.png' %}" class="img-fluid curve-img" alt="" />
+                                        <p class="m-2">Regulated & Secure</p>
+                                    </div>
+                                    <div class="col text-center"><img src="{% static 'img/icons/icon-usp-award.png' %}" class="img-fluid curve-img">
+                                        <p class="m-2">Award Winning</p>
+                                    </div>
+                                    <div class="col text-center"><img src="{% static 'img/icons/icon-usp-leverage.png' %}" class="img-fluid curve-img">
+                                        <p class="m-2">1:1000 Leverage</p>
+                                    </div>
+                                    <div class="col text-center"><img src="{% static 'img/icons/icon-usp-seminars.png' %}" class="img-fluid curve-img">
+                                        <p class="m-2">Live Seminars & Training</p>
+                                    </div>
+                                    <div class="col text-center"><img src="{% static 'img/icons/icon-usp-platform.png' %}" class="img-fluid curve-img">
+                                        <p class="m-2">Advanced Trading Platform</p>
+                                    </div>
+                                    <div class="col text-center"><img src="{% static 'img/icons/icon-usp-instruments.png' %}" class="img-fluid curve-img">
+                                        <p class="m-2">500+ Trading Instruments</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane tabcontent bg-gray pt-5 pb-5" id="Plans" role="tabpanel" aria-labelledby="profile-tab">
+                            <h2 style="text-align: center;"><strong>Forex Accounts</strong></h2>
+                            <h1 style="text-align: center;"><strong class="small">Choose a package</strong></h1>
+                            <div class="row mt-2">
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                                    <div class="card animated flipInX delay-1s">
+                                        <div class="card-header cd1">
+                                            <h4 class="text-white text-center">STARTER ACCOUNT</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="text-center font-18" style="color: #f4be2f;">Minimum Deposit $1,000</p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Spreads from 3.3 pips </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Leverage 1:300
+                                            </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Live Chart Support
+                                            </p>
+
+
+                                        </div>
+                                        <a href="signup.html">
+                                            <div class="card-footer text-uppercase text-center p-2">
+                                                <p class="text-white">OPEN AN ACCOUNT</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                                    <div class="card animated flipInX delay-1s">
+                                        <div class="card-header cd1">
+                                            <h4 class="text-white text-center">BASIC ACCOUNT</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="text-center font-18" style="color: #f4be2f;">Minimum Deposit $3,000</p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Spreads from 3.3 pips </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Leverage 1:500
+                                            </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Live Chart Support
+                                            </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> All Available Platforms
+                                            </p>
+
+                                        </div>
+                                        <a href="signup.html">
+                                            <div class="card-footer text-uppercase text-center p-2">
+                                                <p class="text-white">OPEN AN ACCOUNT</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="card animated flipInY delay-2s">
+                                        <div class="card-header cd2">
+                                            <h4 class="text-white text-center">BRONZE ACCOUNT</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="text-center font-18" style="color: #f4be2f;">Minimum Deposit $6,000</p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Spreads from 2.2 pips </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Leverage 1:700
+                                            </p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Live Chart Support
+                                            </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> All Available Platforms
+                                            </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Access All Education Tools</p>
+                                        </div>
+                                        <a href="signup.html">
+                                            <div class="card-footer text-uppercase text-center p-2">
+                                                <p class="text-white">OPEN AN ACCOUNT</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="card animated flipInY delay-3s">
+                                        <div class="card-header cd3">
+                                            <h4 class="text-white text-center">SILVER ACCOUNT</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="text-center font-18" style="color: #f4be2f;">Minimum Deposit $20,000</p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Spreads from 1.5 pips </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Leverage 1:1000
+                                            </p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Live Chart Support
+                                            </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> All Available Platforms
+                                            </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Access All Education Tools</p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Technical Analysis Report</p>
+
+                                        </div>
+                                        <a href="signup.html">
+                                            <div class="card-footer text-uppercase text-center p-2">
+                                                <p class="text-white">OPEN AN ACCOUNT</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="card animated flipInY delay-3s">
+                                        <div class="card-header cd4">
+                                            <h4 class="text-white text-center">GOLD ACCOUNT</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="text-center font-18" style="color: #f4be2f;">Minimum Deposit $50,000</p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Spreads from 1.0 pips </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Leverage 1:5000
+                                            </p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Live Chart Support
+                                            </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> All Available Platforms
+                                            </p>
+                                            <p class="font-16"><i class="fa fa-check"></i> Access All Education Tools
+                                            </p>
+                                            <p class="font-16"><i class="fa fa-check"></i> Technical Analysis Report
+                                            </p>
+                                            <p class="font-16"><i class="fa fa-check"></i> Market Update Emails
+                                            </p>
+                                        </div>
+                                        <a href="signup.html">
+                                            <div class="card-footer text-uppercase text-center p-2">
+                                                <p class="text-white">OPEN AN ACCOUNT</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="card animated flipInY delay-3s">
+                                        <div class="card-header cd4">
+                                            <h4 class="text-white text-center">PLATINUM ACCOUNT</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="text-center font-18" style="color: #f4be2f;">Minimum Deposit $100,000</p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Spreads from 0.5 pips </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Leverage 1:5000
+                                            </p>
+
+                                            <p class="font-16"><i class="fa fas fa-check"></i> Live Chart Support
+                                            </p>
+                                            <p class="font-16"><i class="fa fas fa-check"></i> All Available Platforms
+                                            </p>
+                                            <p class="font-16"><i class="fa fa-check"></i> Access All Education Tools
+                                            </p>
+                                            <p class="font-16"><i class="fa fa-check"></i> Technical Analysis Report
+                                            </p>
+                                            <p class="font-16"><i class="fa fa-check"></i> Market Update Emails
+                                            </p>
+                                        </div>
+                                        <a href="signup.html">
+                                            <div class="card-footer text-uppercase text-center p-2">
+                                                <p class="text-white">OPEN AN ACCOUNT</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="paragraph paragraph--type--views-reference paragraph--view-mode--default mt-4">
+                            <div class="viewsreference--view-title">
+                                Home: Testimonial
+                            </div>
+                            <div class="views-element-container">
+                                <div class="js-view-dom-id-8b869fb955dedf3c946fe398bb165d4c8798a5a8aa7d46fe2e716d6ef950f447">
+
+
+
+
+
+
+
+
+                                    <div class="testimonial-section pb-115">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <span class="section-title">Testimonial</span>
+                                                    <h2 class="section-summary">What people say about XstationFX
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div id="ContentPlaceHolder1_body_testimonies_area" class="testimonial-carousel owl-carousel owl-theme">
+
+                                                        <div class="single-testimonial">
+                                                        <img src="{% static 'invest.jpg' %}" alt=""></div>
+                                                            <div class="client-desc">
+                                                                <p class="comment"> I always earn $75,000 monthly using his trading patterns.</p>
+                                                                <h6 class="name">kelvin butler </h6>
+                                                                <p class="rank">CEO digital online empire and Trader</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <section id="cfd-trading" data-api="cfd-trading" class="ava-lazy loaded">
+                            <div class="section-wrap" style="opacity: 1;">
+                                <div class="clearfix">
+                                    <h2>What Makes <br>Glut Market <br>Different?</h2>
+                                    <div class="sec6-text">
+                                        <!-- <p>AvaTrade has been an innovative pioneer in online trading since 2006.</p> -->
+                                        <ol>
+                                            <li><span class="number" data-di-id="#gen_1.">1.</span><b>We Want
+                                                            You to Succeed</b> – Learn from the best with our wide range of educational tools, economic calendar, technical and fundamental analysis and important market updates you don’t want to miss.</li>
+                                            <li><span class="number" data-di-id="#gen_2.">2.</span><b>We Believe
+                                                            in Endless Possibilities</b> - Access the world’s most popular instruments, ranging from forex pairs to cryptocurrencies - all at the palm of your hand.</li>
+                                            <li><span class="number" data-di-id="#gen_3.">3.</span><b>We Provide
+                                                            Our Traders With Superior Trading Conditions</b> - No restrictions on short selling and scalping as well as ultra-low spreads.
+                                            </li>
+                                            <li><span class="number" data-di-id="#gen_4.">4.</span><b>We Value
+                                                            Your Time</b> – Enjoy Fast and reliable order execution and a 24-hour live customer service.</li>
+                                            <li><span class="number" data-di-id="#gen_5.">5.</span><b>We Believe
+                                                            You Deserve The Best</b> – Take advantage of our Expert Advisors and Copy Trading platforms as well as 24/7 cryptocurrency trading.</li>
+                                            <li><span class="number" data-di-id="#gen_6.">6.</span><b>We Never
+                                                            Compromise</b> – With regulatory licenses across 6 jurisdictions, we will ensure a hassle-free trading experience.
+                                            </li>
+
+
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+        <div class="paragraph paragraph--type--block paragraph--view-mode--default">
+            <div class="cta-section cta-bg">
+                <div class="container">
+                    <div class="cta-content">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-7">
+                                <h3>Need help with your trading account?</h3>
+                            </div>
+
+                            <div class="col-md-3 col-lg-5 contact-btn-wrapper"><a class="boxed-btn contact-btn" href="/Home/Contact"><span>Contact Us</span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="trusted-award" data-api="trusted-award" class="ava-lazy loaded">
+            <div class="lds-ellipsis" style="display: none;">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="section-wrap" style="opacity: 1;">
+                <div class="clearfix">
+                    <div class="trusted">
+                        <h4>Trusted By</h4>
+                        <img src="{% static 'img/services/trusted-by.png' %}" alt="trusted by">
+                    </div>
+                    <div class="award">
+                        <h4>Award Winner</h4>
+                        <img src="{% static 'img/services/award-winner-2020.png' %}" alt="award winner">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Footer -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="top-footer-section">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-12">
+                            <div>
+                                <div id="block-footercolumn1">
+
+
+                                    <div class="footer-logo-wrapper">
+                                        <a href="">
+                                            <h1 style="color: white;">XstationFX</h1> 
+                                        </a>
+                                    </div>
+                                    <p class="footer-txt">Our goal is to prioritise a seamless customer service experience to our customers, who are paramount to our business. We are committed to offering our clients a reliable and secure service so as to build a complete
+                                        financial portfolio that empowers them to achieve financial freedom.</p>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-2 col-md-3">
+                            <div>
+                                <div id="block-footercolumn2">
+
+
+                                    <h4>Useful Links</h4>
+                                    <ul class="footer-links">
+                                        <li><a href="{% url 'home' %}">Home</a></li>
+                                        <li><a href="{% url 'about' %}">About us</a></li>
+                                        <li><a href="{% url 'signup' %}">Register</a></li>
+                                        <li><a href="{% url 'signin' %}">Login</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    </ul>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-2 col-md-3">
+                            <div>
+                                <div id="block-footercolumn3">
+
+
+                                    <h4>Documents</h4>
+                                    <ul class="footer-links">
+                                        <li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
+                                        <!-- <li><a href="/Home/Privacy_Policy">Privacy Policy</a></li> -->
+                                        <li><a href="{% url 'assets' %}">Trading Assets</a></li>
+                                        <!-- <li><a href="/Home/Payment_Policy">Payments Policy</a></li> -->
+                                        <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                    </ul>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div>
+                                <div id="block-footercolumn4">
+
+
+                                    <h4>Contact Us</h4>
+                                    <div class="footer-contact-info">
+                                        <ul>
+                                            <li><i class="fa fa-home"></i><span>30 Lothian Rd,<br />
+                                                            Edinburgh EH1 2EP,<br />
+                                                            United Kingdom</span>
+                                            </li>
+
+                                            <li><i class="far fa-envelope"></i><span>officialmailingservices@aol.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright-section">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <p class="text-left">
+                                <div>
+                                    <div id="block-copyright">
+
+
+                                        © Copyrights 2024 All rights reserved.
+
+
+                                    </div>
+
+                                </div>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div style="height:50px;"></div>
+            </div>
+        </footer>
+        <script type="text/javascript">
+            (function() {
+                var options = {
+                    whatsapp: "+", // WhatsApp number
+                    call_to_action: "Contact us", // Call to action
+                    position: "left", // Position may be 'right' or 'left'
+                };
+                var proto = document.location.protocol,
+                    host = "getbutton.io",
+                    url = proto + "//static." + host;
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = url + '/widget-send-button/js/init.js';
+                s.onload = function() {
+                    WhWidgetSendButton.init(host, proto, options);
+                };
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            })();
+        </script>
+
+
+        <!--    footer section end   -->
+        <div class="tradingview-widget-container" style="position: fixed;
+    bottom: 0%;
+    background: #23212d;
+    opacity: 0.9; z-index: 999;">
+            <div class="tradingview-widget-container__widget"></div>
+
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                    "symbols": [{
+                            "proName": "FOREXCOM:SPXUSD",
+                            "title": "S&P 500"
+                        },
+                        {
+                            "proName": "FOREXCOM:NSXUSD",
+                            "title": "Nasdaq 100"
+                        },
+                        {
+                            "proName": "FX_IDC:EURUSD",
+                            "title": "EUR/USD"
+                        },
+                        {
+                            "proName": "BITSTAMP:BTCUSD",
+                            "title": "BTC/USD"
+                        },
+                        {
+                            "proName": "BITSTAMP:ETHUSD",
+                            "title": "ETH/USD"
+                        }
+                    ],
+                    "colorTheme": "dark",
+                    "isTransparent": true,
+                    "displayMode": "adaptive",
+                    "locale": "en"
+                }
+            </script>
+
+            <div class="bonus_area">
+                <div class="inner_area"><button class="global-close-btn close-btn" data-dismiss="modal"><span></span></button>
+                    <div class="icon"><img src="{% static 'img/get-free-box.png' %}" alt="" style="width: 54.5px;"></div><span class="title">Get FREE</span><strong class="price">
+                                <em>$</em>100</strong><span class="subtitle">on $500 deposit</span>
+                </div>
+                <a href="/Account/Register" class="get-btn">Get Now</a>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- back to top area start -->
+        <div class="back-to-top">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        <!-- back to top area end -->
+
+        <script src="{% static 'js/main30f4.js?v=3' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/bootstrap.min3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/YTPlayer.min3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/google-map-activate3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/isotope.pkgd.min3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/jquery-3.3.1.min7eda.js' %}" type="text/javasAcript"></script>
+        <script src="{% static 'js/assets/jquery.ripples-min3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/jquery.slicknav.min3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/main3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/owl.carousel.min3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/parallax.min3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/particles.min3860.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/assets/popper.min3860.js' %}" type="text/javascript"></script>
+
+
+        <div class="mgm" style="display: none;">
+            <div class="txt">Someone from <b></b> just invested <a href="javascript:void(0);" onclick="javascript:void(0);"></a></div>
+        </div>
+
+        <style>
+            .mgm {
+                border-radius: 7px;
+                position: fixed;
+                z-index: 80;
+                bottom: 80px;
+                right: 30%;
+                background: #fff;
+                padding: 10px 27px;
+                box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, .3);
+            }
+
+            .mgm a {
+                font-weight: 700;
+                display: block;
+                color: #064796;
+            }
+
+            .mgm a,
+            .mgm a:active {
+                transition: all .2s ease;
+                color: #064796;
+            }
+        </style>
+        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.html"></script>
+        <script type="text/javascript">
+            var listCountries = ['Brazil', 'USA', 'Germany', 'France', 'Italy', 'India', 'Australia', 'China', 'Canada', 'Argentina', 'Saudi Arabia', 'Mexico', 'Indonesia', 'Egypt', 'Venezuela', 'Madagascar', 'Sweden', 'Philippines', 'Finland', 'Italy', 'Ecuador', 'United Kingdom', 'Belarus', 'Greece', 'Cuba', 'Hungary', 'Portugal', 'Austria', 'Iceland', 'Panama', 'Croatia', 'Denmark', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus'];
+            var listPlans = ['$1000', '$54950', '$45000', '$20560', '$105000', '$50000', '$60000', '$3000', '$15000', '$5000'];
+            var listAction = ['Earned', 'Withdraw', 'Deposited']
+            interval = Math.floor(Math.random() * (4000 - 8000 + 1) + 6000);
+            var run = setInterval(request, interval);
+
+            function request() {
+                clearInterval(run);
+                interval = Math.floor(Math.random() * (4000 - 8000 + 1) + 6000);
+                var country = listCountries[Math.floor(Math.random() * listCountries.length)];
+                var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
+                var action = listAction[Math.floor(Math.random() * listAction.length)];
+                var msg = 'Someone from <b>' + country + '</b> just ' + action + ' <a href="javascript:void(0);" onclick="javascript:void(0);">' + plan + '</a>';
+                $(".mgm .txt").html(msg);
+                $(".mgm").stop(true).fadeIn(300);
+                window.setTimeout(function() {
+                    $(".mgm").stop(true).fadeOut(300);
+                }, 6000);
+                run = setInterval(request, interval);
+            }
+        </script>
+        <div style="position:fixed;bottom:0px;left:8%;z-index:999999;" id="gtranslate_wrapper">
+            <!-- GTranslate: https://gtranslate.io/ -->
+            <style>
+                .switcher {
+                    font-family: Arial;
+                    font-size: 12pt;
+                    text-align: left;
+                    cursor: pointer;
+                    overflow: hidden;
+                    width: 173px;
+                    line-height: 17px;
+                }
+
+                .switcher a {
+                    text-decoration: none;
+                    display: block;
+                    font-size: 12pt;
+                    -webkit-box-sizing: content-box;
+                    -moz-box-sizing: content-box;
+                    box-sizing: content-box;
+                }
+
+                .switcher a img {
+                    vertical-align: middle;
+                    display: inline;
+                    border: 0;
+                    padding: 0;
+                    margin: 0;
+                    opacity: 0.8;
+                }
+
+                .switcher a:hover img {
+                    opacity: 1;
+                }
+
+                .switcher .selected {
+                    background: #fff linear-gradient(180deg, #efefef 0%, #fff 70%);
+                    position: relative;
+                    z-index: 9999;
+                }
+
+                .switcher .selected a {
+                    border: 1px solid #ccc;
+                    color: #070707;
+                    padding: 3px 5px;
+                    width: 161px;
+                }
+
+                .switcher .selected a:after {
+                    height: 24px;
+                    display: inline-block;
+                    position: absolute;
+                    right: 10px;
+                    width: 15px;
+                    background-position: 50%;
+                    background-size: 11px;
+                    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 285 285'><path d='M282 76.5l-14.2-14.3a9 9 0 0 0-13.1 0L142.5 174.4 30.3 62.2a9 9 0 0 0-13.2 0L3 76.5a9 9 0 0 0 0 13.1l133 133a9 9 0 0 0 13.1 0l133-133a9 9 0 0 0 0-13z' style='fill:%23050505'/></svg>");
+                    background-repeat: no-repeat;
+                    content: "" !important;
+                    transition: all .2s;
+                }
+
+                .switcher .selected a.open:after {
+                    -webkit-transform: rotate(-180deg);
+                    transform: rotate(-180deg);
+                }
+
+                .switcher .selected a:hover {
+                    background: #fff;
+                }
+
+                .switcher .option {
+                    position: relative;
+                    z-index: 9998;
+                    border-left: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+                    background-color: #eee;
+                    display: none;
+                    width: 171px;
+                    max-height: 198px;
+                    -webkit-box-sizing: content-box;
+                    -moz-box-sizing: content-box;
+                    box-sizing: content-box;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                }
+
+                .switcher .option a {
+                    color: #000;
+                    padding: 3px 5px;
+                }
+
+                .switcher .option a:hover {
+                    background: #fff;
+                }
+
+                .switcher .option a.selected {
+                    background: #fff;
+                }
+
+                #selected_lang_name {
+                    float: none;
+                }
+
+                .l_name {
+                    float: none !important;
+                    margin: 0;
+                }
+
+                .switcher .option::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+                    border-radius: 5px;
+                    background-color: #f5f5f5;
+                }
+
+                .switcher .option::-webkit-scrollbar {
+                    width: 5px;
+                }
+
+                .switcher .option::-webkit-scrollbar-thumb {
+                    border-radius: 5px;
+                    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, .3);
+                    background-color: #888;
+                }
+            </style>
+            <div class="switcher notranslate">
+                <div class="selected">
+                    <a href="#" onclick="return false;"><img src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/en-us.png" height="24" width="24" alt="en" /> English</a>
+                </div>
+                <div class="option">
+                    <a href="#" onclick="doGTranslate('en|af');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;" title="Afrikaans" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/af.png" height="24" width="24" alt="af" /> Afrikaans</a>
+                    <a
+                        href="#" onclick="doGTranslate('en|sq');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;" title="Shqip" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/sq.png" height="24" width="24" alt="sq" /> Shqip</a><a href="#" onclick="doGTranslate('en|am');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="አማርኛ" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/am.png" height="24" width="24" alt="am" /> አማርኛ</a><a href="#" onclick="doGTranslate('en|ar');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="العربية" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ar.png" height="24" width="24" alt="ar" /> العربية</a><a href="#" onclick="doGTranslate('en|hy');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Հայերեն" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/hy.png" height="24" width="24" alt="hy" /> Հայերեն</a><a href="#" onclick="doGTranslate('en|az');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Azərbaycan dili" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/az.png" height="24" width="24" alt="az" /> Azərbaycan dili</a><a href="#" onclick="doGTranslate('en|eu');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Euskara" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/eu.png" height="24" width="24" alt="eu" /> Euskara</a><a href="#" onclick="doGTranslate('en|be');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Беларуская мова" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/be.png" height="24" width="24" alt="be" /> Беларуская мова</a><a href="#" onclick="doGTranslate('en|bn');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="বাংলা" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/bn.png" height="24" width="24" alt="bn" /> বাংলা</a><a href="#" onclick="doGTranslate('en|bs');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Bosanski" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/bs.png" height="24" width="24" alt="bs" /> Bosanski</a><a href="#" onclick="doGTranslate('en|bg');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Български" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/bg.png" height="24" width="24" alt="bg" /> Български</a><a href="#" onclick="doGTranslate('en|ca');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Català" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ca.png" height="24" width="24" alt="ca" /> Català</a><a href="#" onclick="doGTranslate('en|ceb');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Cebuano" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ceb.png" height="24" width="24" alt="ceb" /> Cebuano</a><a href="#" onclick="doGTranslate('en|ny');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Chichewa" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ny.png" height="24" width="24" alt="ny" /> Chichewa</a><a href="#" onclick="doGTranslate('en|zh-CN');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="简体中文" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/zh-CN.png" height="24" width="24" alt="zh-CN" /> 简体中文</a><a href="#" onclick="doGTranslate('en|zh-TW');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="繁體中文" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/zh-TW.png" height="24" width="24" alt="zh-TW" /> 繁體中文</a><a href="#" onclick="doGTranslate('en|co');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Corsu" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/co.png" height="24" width="24" alt="co" /> Corsu</a><a href="#" onclick="doGTranslate('en|hr');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Hrvatski" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/hr.png" height="24" width="24" alt="hr" /> Hrvatski</a><a href="#" onclick="doGTranslate('en|cs');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Čeština‎" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/cs.png" height="24" width="24" alt="cs" /> Čeština‎</a><a href="#" onclick="doGTranslate('en|da');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Dansk" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/da.png" height="24" width="24" alt="da" /> Dansk</a><a href="#" onclick="doGTranslate('en|nl');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Nederlands" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/nl.png" height="24" width="24" alt="nl" /> Nederlands</a><a href="#" onclick="doGTranslate('en|en');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="English" class="nturl selected"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/en-us.png" height="24" width="24" alt="en" /> English</a><a href="#" onclick="doGTranslate('en|eo');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Esperanto" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/eo.png" height="24" width="24" alt="eo" /> Esperanto</a><a href="#" onclick="doGTranslate('en|et');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Eesti" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/et.png" height="24" width="24" alt="et" /> Eesti</a><a href="#" onclick="doGTranslate('en|tl');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Filipino" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/tl.png" height="24" width="24" alt="tl" /> Filipino</a><a href="#" onclick="doGTranslate('en|fi');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Suomi" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/fi.png" height="24" width="24" alt="fi" /> Suomi</a><a href="#" onclick="doGTranslate('en|fr');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Français" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/fr.png" height="24" width="24" alt="fr" /> Français</a><a href="#" onclick="doGTranslate('en|fy');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Frysk" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/fy.png" height="24" width="24" alt="fy" /> Frysk</a><a href="#" onclick="doGTranslate('en|gl');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Galego" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/gl.png" height="24" width="24" alt="gl" /> Galego</a><a href="#" onclick="doGTranslate('en|ka');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="ქართული" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ka.png" height="24" width="24" alt="ka" /> ქართული</a><a href="#" onclick="doGTranslate('en|de');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Deutsch" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/de.png" height="24" width="24" alt="de" /> Deutsch</a><a href="#" onclick="doGTranslate('en|el');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Ελληνικά" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/el.png" height="24" width="24" alt="el" /> Ελληνικά</a><a href="#" onclick="doGTranslate('en|gu');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="ગુજરાતી" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/gu.png" height="24" width="24" alt="gu" /> ગુજરાતી</a><a href="#" onclick="doGTranslate('en|ht');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Kreyol ayisyen" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ht.png" height="24" width="24" alt="ht" /> Kreyol ayisyen</a><a href="#" onclick="doGTranslate('en|ha');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Harshen Hausa" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ha.png" height="24" width="24" alt="ha" /> Harshen Hausa</a><a href="#" onclick="doGTranslate('en|haw');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Ōlelo Hawaiʻi" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/haw.png" height="24" width="24" alt="haw" /> Ōlelo Hawaiʻi</a><a href="#" onclick="doGTranslate('en|iw');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="עִבְרִית" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/iw.png" height="24" width="24" alt="iw" /> עִבְרִית</a><a href="#" onclick="doGTranslate('en|hi');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="हिन्दी" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/hi.png" height="24" width="24" alt="hi" /> हिन्दी</a><a href="#" onclick="doGTranslate('en|hmn');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Hmong" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/hmn.png" height="24" width="24" alt="hmn" /> Hmong</a><a href="#" onclick="doGTranslate('en|hu');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Magyar" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/hu.png" height="24" width="24" alt="hu" /> Magyar</a><a href="#" onclick="doGTranslate('en|is');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Íslenska" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/is.png" height="24" width="24" alt="is" /> Íslenska</a><a href="#" onclick="doGTranslate('en|ig');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Igbo" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ig.png" height="24" width="24" alt="ig" /> Igbo</a><a href="#" onclick="doGTranslate('en|id');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Bahasa Indonesia" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/id.png" height="24" width="24" alt="id" /> Bahasa Indonesia</a><a href="#" onclick="doGTranslate('en|ga');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Gaelige" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ga.png" height="24" width="24" alt="ga" /> Gaelige</a><a href="#" onclick="doGTranslate('en|it');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Italiano" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/it.png" height="24" width="24" alt="it" /> Italiano</a><a href="#" onclick="doGTranslate('en|ja');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="日本語" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ja.png" height="24" width="24" alt="ja" /> 日本語</a><a href="#" onclick="doGTranslate('en|jw');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Basa Jawa" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/jw.png" height="24" width="24" alt="jw" /> Basa Jawa</a><a href="#" onclick="doGTranslate('en|kn');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="ಕನ್ನಡ" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/kn.png" height="24" width="24" alt="kn" /> ಕನ್ನಡ</a><a href="#" onclick="doGTranslate('en|kk');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Қазақ тілі" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/kk.png" height="24" width="24" alt="kk" /> Қазақ тілі</a><a href="#" onclick="doGTranslate('en|km');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="ភាសាខ្មែរ" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/km.png" height="24" width="24" alt="km" /> ភាសាខ្មែរ</a><a href="#" onclick="doGTranslate('en|ko');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="한국어" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ko.png" height="24" width="24" alt="ko" /> 한국어</a><a href="#" onclick="doGTranslate('en|ku');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="كوردی‎" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ku.png" height="24" width="24" alt="ku" /> كوردی‎</a><a href="#" onclick="doGTranslate('en|ky');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Кыргызча" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ky.png" height="24" width="24" alt="ky" /> Кыргызча</a><a href="#" onclick="doGTranslate('en|lo');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="ພາສາລາວ" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/lo.png" height="24" width="24" alt="lo" /> ພາສາລາວ</a><a href="#" onclick="doGTranslate('en|la');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Latin" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/la.png" height="24" width="24" alt="la" /> Latin</a><a href="#" onclick="doGTranslate('en|lv');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Latviešu valoda" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/lv.png" height="24" width="24" alt="lv" /> Latviešu valoda</a><a href="#" onclick="doGTranslate('en|lt');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Lietuvių kalba" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/lt.png" height="24" width="24" alt="lt" /> Lietuvių kalba</a><a href="#" onclick="doGTranslate('en|lb');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Lëtzebuergesch" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/lb.png" height="24" width="24" alt="lb" /> Lëtzebuergesch</a><a href="#" onclick="doGTranslate('en|mk');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Македонски јазик" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/mk.png" height="24" width="24" alt="mk" /> Македонски јазик</a><a href="#" onclick="doGTranslate('en|mg');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Malagasy" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/mg.png" height="24" width="24" alt="mg" /> Malagasy</a><a href="#" onclick="doGTranslate('en|ms');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Bahasa Melayu" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ms.png" height="24" width="24" alt="ms" /> Bahasa Melayu</a><a href="#" onclick="doGTranslate('en|ml');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="മലയാളം" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ml.png" height="24" width="24" alt="ml" /> മലയാളം</a><a href="#" onclick="doGTranslate('en|mt');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Maltese" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/mt.png" height="24" width="24" alt="mt" /> Maltese</a><a href="#" onclick="doGTranslate('en|mi');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Te Reo Māori" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/mi.png" height="24" width="24" alt="mi" /> Te Reo Māori</a><a href="#" onclick="doGTranslate('en|mr');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="मराठी" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/mr.png" height="24" width="24" alt="mr" /> मराठी</a><a href="#" onclick="doGTranslate('en|mn');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Монгол" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/mn.png" height="24" width="24" alt="mn" /> Монгол</a><a href="#" onclick="doGTranslate('en|my');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="ဗမာစာ" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/my.png" height="24" width="24" alt="my" /> ဗမာစာ</a><a href="#" onclick="doGTranslate('en|ne');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="नेपाली" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ne.png" height="24" width="24" alt="ne" /> नेपाली</a><a href="#" onclick="doGTranslate('en|no');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Norsk bokmål" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/no.png" height="24" width="24" alt="no" /> Norsk bokmål</a><a href="#" onclick="doGTranslate('en|ps');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="پښتو" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ps.png" height="24" width="24" alt="ps" /> پښتو</a><a href="#" onclick="doGTranslate('en|fa');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="فارسی" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/fa.png" height="24" width="24" alt="fa" /> فارسی</a><a href="#" onclick="doGTranslate('en|pl');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Polski" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/pl.png" height="24" width="24" alt="pl" /> Polski</a><a href="#" onclick="doGTranslate('en|pt');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Português" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/pt.png" height="24" width="24" alt="pt" /> Português</a><a href="#" onclick="doGTranslate('en|pa');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="ਪੰਜਾਬੀ" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/pa.png" height="24" width="24" alt="pa" /> ਪੰਜਾਬੀ</a><a href="#" onclick="doGTranslate('en|ro');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Română" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ro.png" height="24" width="24" alt="ro" /> Română</a><a href="#" onclick="doGTranslate('en|ru');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Русский" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ru.png" height="24" width="24" alt="ru" /> Русский</a><a href="#" onclick="doGTranslate('en|sm');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Samoan" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/sm.png" height="24" width="24" alt="sm" /> Samoan</a><a href="#" onclick="doGTranslate('en|gd');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Gàidhlig" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/gd.png" height="24" width="24" alt="gd" /> Gàidhlig</a><a href="#" onclick="doGTranslate('en|sr');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Српски језик" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/sr.png" height="24" width="24" alt="sr" /> Српски језик</a><a href="#" onclick="doGTranslate('en|st');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Sesotho" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/st.png" height="24" width="24" alt="st" /> Sesotho</a><a href="#" onclick="doGTranslate('en|sn');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Shona" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/sn.png" height="24" width="24" alt="sn" /> Shona</a><a href="#" onclick="doGTranslate('en|sd');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="سنڌي" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/sd.png" height="24" width="24" alt="sd" /> سنڌي</a><a href="#" onclick="doGTranslate('en|si');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="සිංහල" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/si.png" height="24" width="24" alt="si" /> සිංහල</a><a href="#" onclick="doGTranslate('en|sk');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Slovenčina" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/sk.png" height="24" width="24" alt="sk" /> Slovenčina</a><a href="#" onclick="doGTranslate('en|sl');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Slovenščina" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/sl.png" height="24" width="24" alt="sl" /> Slovenščina</a><a href="#" onclick="doGTranslate('en|so');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Afsoomaali" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/so.png" height="24" width="24" alt="so" /> Afsoomaali</a><a href="#" onclick="doGTranslate('en|es');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Español" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/es.png" height="24" width="24" alt="es" /> Español</a><a href="#" onclick="doGTranslate('en|su');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Basa Sunda" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/su.png" height="24" width="24" alt="su" /> Basa Sunda</a><a href="#" onclick="doGTranslate('en|sw');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Kiswahili" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/sw.png" height="24" width="24" alt="sw" /> Kiswahili</a><a href="#" onclick="doGTranslate('en|sv');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Svenska" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/sv.png" height="24" width="24" alt="sv" /> Svenska</a><a href="#" onclick="doGTranslate('en|tg');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Тоҷикӣ" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/tg.png" height="24" width="24" alt="tg" /> Тоҷикӣ</a><a href="#" onclick="doGTranslate('en|ta');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="தமிழ்" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ta.png" height="24" width="24" alt="ta" /> தமிழ்</a><a href="#" onclick="doGTranslate('en|te');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="తెలుగు" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/te.png" height="24" width="24" alt="te" /> తెలుగు</a><a href="#" onclick="doGTranslate('en|th');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="ไทย" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/th.png" height="24" width="24" alt="th" /> ไทย</a><a href="#" onclick="doGTranslate('en|tr');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Türkçe" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/tr.png" height="24" width="24" alt="tr" /> Türkçe</a><a href="#" onclick="doGTranslate('en|uk');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Українська" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/uk.png" height="24" width="24" alt="uk" /> Українська</a><a href="#" onclick="doGTranslate('en|ur');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="اردو" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/ur.png" height="24" width="24" alt="ur" /> اردو</a><a href="#" onclick="doGTranslate('en|uz');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="O‘zbekcha" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/uz.png" height="24" width="24" alt="uz" /> O‘zbekcha</a><a href="#" onclick="doGTranslate('en|vi');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Tiếng Việt" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/vi.png" height="24" width="24" alt="vi" /> Tiếng Việt</a><a href="#" onclick="doGTranslate('en|cy');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Cymraeg" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/cy.png" height="24" width="24" alt="cy" /> Cymraeg</a><a href="#" onclick="doGTranslate('en|xh');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="isiXhosa" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/xh.png" height="24" width="24" alt="xh" /> isiXhosa</a><a href="#" onclick="doGTranslate('en|yi');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="יידיש" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/yi.png" height="24" width="24" alt="yi" /> יידיש</a><a href="#" onclick="doGTranslate('en|yo');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Yorùbá" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/yo.png" height="24" width="24" alt="yo" /> Yorùbá</a><a href="#" onclick="doGTranslate('en|zu');jQuery('div.switcher div.selected a').html(jQuery(this).html());return false;"
+                            title="Zulu" class="nturl"><img data-gt-lazy-src="//unvacationportal.org/wp-content/plugins/gtranslate/flags/24/zu.png" height="24" width="24" alt="zu" /> Zulu</a>
+                </div>
+            </div>
+            <script>
+                jQuery('.switcher .selected').click(function() {
+                    jQuery('.switcher .option a img').each(function() {
+                        if (!jQuery(this)[0].hasAttribute('src')) jQuery(this).attr('src', jQuery(this).attr('data-gt-lazy-src'))
+                    });
+                    if (!(jQuery('.switcher .option').is(':visible'))) {
+                        jQuery('.switcher .option').stop(true, true).delay(100).slideDown(500);
+                        jQuery('.switcher .selected a').toggleClass('open')
+                    }
+                });
+                jQuery('.switcher .option').bind('mousewheel', function(e) {
+                    var options = jQuery('.switcher .option');
+                    if (options.is(':visible')) options.scrollTop(options.scrollTop() - e.originalEvent.wheelDelta / 10);
+                    return false;
+                });
+                jQuery('body').not('.switcher').click(function(e) {
+                    if (jQuery('.switcher .option').is(':visible') && e.target != jQuery('.switcher .option').get(0)) {
+                        jQuery('.switcher .option').stop(true, true).delay(100).slideUp(500);
+                        jQuery('.switcher .selected a').toggleClass('open')
+                    }
+                });
+            </script>
+            <style>
+                #goog-gt-tt {
+                    display: none !important;
+                }
+
+                .goog-te-banner-frame {
+                    display: none !important;
+                }
+
+                .goog-te-menu-value:hover {
+                    text-decoration: none !important;
+                }
+
+                .goog-text-highlight {
+                    background-color: transparent !important;
+                    box-shadow: none !important;
+                }
+
+                body {
+                    top: 0 !important;
+                }
+
+                #google_translate_element2 {
+                    display: none !important;
+                }
+            </style>
+
+            <div id="google_translate_element2"></div>
+            <script>
+                function googleTranslateElementInit2() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en',
+                        autoDisplay: false
+                    }, 'google_translate_element2');
+                }
+            </script>
+            <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+            <script>
+                function GTranslateGetCurrentLang() {
+                    var keyValue = document['cookie'].match('(^|;) ?googtrans=([^;]*)(;|$)');
+                    return keyValue ? keyValue[2].split('/')[2] : null;
+                }
+
+                function GTranslateFireEvent(element, event) {
+                    try {
+                        if (document.createEventObject) {
+                            var evt = document.createEventObject();
+                            element.fireEvent('on' + event, evt)
+                        } else {
+                            var evt = document.createEvent('HTMLEvents');
+                            evt.initEvent(event, true, true);
+                            element.dispatchEvent(evt)
+                        }
+                    } catch (e) {}
+                }
+
+                function doGTranslate(lang_pair) {
+                    if (lang_pair.value) lang_pair = lang_pair.value;
+                    if (lang_pair == '') return;
+                    var lang = lang_pair.split('|')[1];
+                    if (GTranslateGetCurrentLang() == null && lang == lang_pair.split('|')[0]) return;
+                    var teCombo;
+                    var sel = document.getElementsByTagName('select');
+                    for (var i = 0; i < sel.length; i++)
+                        if (sel[i].className.indexOf('goog-te-combo') != -1) {
+                            teCombo = sel[i];
+                            break;
+                        }
+                    if (document.getElementById('google_translate_element2') == null || document.getElementById('google_translate_element2').innerHTML.length == 0 || teCombo.length == 0 || teCombo.innerHTML.length == 0) {
+                        setTimeout(function() {
+                            doGTranslate(lang_pair)
+                        }, 500)
+                    } else {
+                        teCombo.value = lang;
+                        GTranslateFireEvent(teCombo, 'change');
+                        GTranslateFireEvent(teCombo, 'change')
+                    }
+                }
+                if (GTranslateGetCurrentLang() != null) jQuery(document).ready(function() {
+                    var lang_html = jQuery('div.switcher div.option').find('img[alt="' + GTranslateGetCurrentLang() + '"]').parent().html();
+                    if (typeof lang_html != 'undefined') jQuery('div.switcher div.selected a').html(lang_html.replace('data-gt-lazy-', ''));
+                });
+            </script>
+            <script>
+                jQuery(document).ready(function() {
+                    var allowed_languages = ["af", "sq", "am", "ar", "hy", "az", "eu", "be", "bn", "bs", "bg", "ca", "ceb", "ny", "zh-CN", "zh-TW", "co", "hr", "cs", "da", "nl", "en", "eo", "et", "tl", "fi", "fr", "fy", "gl", "ka", "de", "el", "gu", "ht", "ha", "haw", "iw", "hi", "hmn", "hu", "is", "ig", "id", "ga", "it", "ja", "jw", "kn", "kk", "km", "ko", "ku", "ky", "lo", "la", "lv", "lt", "lb", "mk", "mg", "ms", "ml", "mt", "mi", "mr", "mn", "my", "ne", "no", "ps", "fa", "pl", "pt", "pa", "ro", "ru", "sm", "gd", "sr", "st", "sn", "sd", "si", "sk", "sl", "so", "es", "su", "sw", "sv", "tg", "ta", "te", "th", "tr", "uk", "ur", "uz", "vi", "cy", "xh", "yi", "yo", "zu"];
+                    var accept_language = navigator.language.toLowerCase() || navigator.userLanguage.toLowerCase();
+                    switch (accept_language) {
+                        case 'zh-cn':
+                            var preferred_language = 'zh-CN';
+                            break;
+                        case 'zh':
+                            var preferred_language = 'zh-CN';
+                            break;
+                        case 'zh-tw':
+                            var preferred_language = 'zh-TW';
+                            break;
+                        case 'zh-hk':
+                            var preferred_language = 'zh-TW';
+                            break;
+                        case 'he':
+                            var preferred_language = 'iw';
+                            break;
+                        default:
+                            var preferred_language = accept_language.substr(0, 2);
+                            break;
+                    }
+                    if (preferred_language != 'en' && GTranslateGetCurrentLang() == null && document.cookie.match('gt_auto_switch') == null && allowed_languages.indexOf(preferred_language) >= 0) {
+                        doGTranslate('en|' + preferred_language);
+                        document.cookie = 'gt_auto_switch=1; expires=Thu, 05 Dec 2030 08:08:08 UTC; path=/;';
+                        var lang_html = jQuery('div.switcher div.option').find('img[alt="' + preferred_language + '"]').parent().html();
+                        if (typeof lang_html != 'undefined') jQuery('div.switcher div.selected a').html(lang_html.replace('data-gt-lazy-', ''));
+                    }
+                });
+            </script>
+        </div>
+
+
+</body>
+
+</html>

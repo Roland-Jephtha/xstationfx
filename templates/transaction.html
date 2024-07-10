@@ -1,0 +1,102 @@
+
+{% extends "dashboard_new.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+  
+{% block content %} 
+
+
+
+     
+
+
+    <main id="main" class="main">
+
+      <div id="dash-main">
+
+
+        <div class="pagetitle">
+          <h1 style="color: rgb(235, 45, 45);">Transactions History</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+              <li class="breadcrumb-item">Users</li>
+              <li class="breadcrumb-item active">Transactions</li>
+            </ol>
+          </nav>
+        </div><!-- End Page Title -->
+    
+
+        <section class="section profile" >
+          <div class="row">
+           <!-- Recent Sales -->
+           <div class="col-12" style="background-color: #042836; color:white">
+            <div class="card recent-sales overflow-auto" style="background-color: #042836; color:white">
+
+              
+
+              <div class="card-body" style="background-color: #042836; color:white">
+                <h5 class="card-title" style="background-color: #042836; color:white">Transactions <span></span></h5>
+
+                <table class="table table-borderless datatabl" style=" color:white">
+                  <thead>
+                    <tr>
+                      <th scope="col">Transaction ID</th>
+                      <th scope="col">Action</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Time</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    {% for transaction in transactions reversed%}
+                    <tr>
+                      <td>{{transaction.transaction_id}}</td>
+                      <td><a href="#" class="text-white">{{transaction.action}}</a></td>
+                      <td>${{transaction.price}}</td>
+                      <td><a href="#" class="text-primary">{{transaction.timestamp}}</a></td>
+
+                      {% if transaction.status == "Successful"%}
+                      <td><span class="badge bg-success">{{transaction.status}}</span></td>
+                      {% elif transaction.status == "Pending"%}
+                      <td><span class="badge bg-warning">{{transaction.status}}</span></td>
+                      {% elif transaction.status == "Failed"%}
+                      <td><span class="badge bg-danger">{{transaction.status}}</span></td>
+                      {%endif%}
+
+
+
+
+                    </tr>
+                    {%endfor%}
+                    
+                  </tbody>
+                </table>
+
+              </div>
+
+            </div>
+          </div><!-- End Recent Sales -->
+
+
+          </div>
+        </section>
+
+
+        
+    
+      </main>
+</div>
+</div>
+
+
+  
+{% endblock content %} 
+
+
+
+     

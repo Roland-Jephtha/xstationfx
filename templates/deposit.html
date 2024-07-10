@@ -1,0 +1,238 @@
+
+{% extends "dashboard_new.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+  
+{% block content %} 
+
+
+
+     
+
+     
+
+  
+
+
+
+    <main id="main" class="main">
+
+      <div id="dash-main">
+
+
+      {%for message in messages%}
+
+            
+      <div class="alert alert-success alert-dismissible fade show " role="alert"  style="margin: 2%;">
+        <strong>{{message}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+       {%endfor%}
+
+        <div class="pagetitle">
+          <h1 style="color: rgb(235, 45, 45);">Deposit</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+              <li class="breadcrumb-item">Users</li>
+              <li class="breadcrumb-item active">Deposit</li>
+            </ol>
+          </nav>
+        </div><!-- End Page Title -->
+    
+
+        <section class="section profile"  >
+          <div class="row">
+            <div class="col-xl-6">
+
+        
+                
+              <div class="card" style="background-color: #042836; border-radius:10px">
+                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center" style="margin-top:-5%">
+
+
+                  <form method="POST"  class="mt-4 login-form" enctype="multipart/form-data" onsubmit="SubmitForm()">
+
+                    {%csrf_token%}
+                <div class="row mb-3"  style="color: rgb(115, 184, 245); padding-left:4%; padding-right:4% ">
+
+                    <label for="">Currency</label>
+                    {{deposit_form.currency}}
+                    <label for="">Amount in Dollar($)</label>
+                    {{deposit_form.amount}}
+                    <label for="">Payment Slip</label>
+                    {{deposit_form.payment_slip}}
+                    {{deposit_form.user}}
+
+                    <div class="col-md-8 col-lg-9">
+
+
+
+                       <br> <div class="text-center" > 
+                            <button type="submit" class="btn btn-primary withdraw_btn" >Deposit</button>
+                          </div>
+
+                       
+
+               </div>
+
+
+              
+                  </div>
+                </form>
+                  
+                  <!-- <h3>Web Designer</h3> -->
+                  
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="col-xl-6">
+    
+              <div class="card" style="background-color: #10141b;">
+                <div class="card-body pt-3">
+
+              <p style = "color:rgb(168, 159, 159);">copy the wallet address on this section and pay your desired amount, then add you payment slip and deposit.</p>    
+
+              <img src="" id="logo_image" alt="" style="width: 20%; "> <br>
+                  <strong style="color:rgb(168, 159, 159);">wallet Address :</strong> 
+
+                <div >
+                  <input type="text" id="wallet_field" value="" style="width: 50%; background-color: #042836; color:white; border:#042836">
+                  
+                  <button class="btn btn-primary" onclick="copyText()"> copy <i data-feather="user" class="bi bi-files fea icon-sm icons"></i></button>
+                </div>
+
+                  <strong style="color:rgb(168, 159, 159);">QR Code :</strong>
+                  
+                  <div class="row mb-3">
+                    <img src="" alt="" style="width: 80%; " id="qr_code_image">
+                  </div> 
+
+
+            
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+
+
+        
+    
+      </main>
+</div>
+</div>
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+     function copyText(){
+      let text_field = document.getElementById("wallet_field");
+      text_field.select();
+      document.execCommand("copy");
+      alert("Text copied to clipboard!")
+    }
+
+    function SubmitForm(){
+ 
+      alert("Deposit is being processed")
+      
+    }
+
+  </script>
+
+
+  <style>
+    #wallet_field{
+      height: 40px;
+      border-radius: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function updatePaymentOptions() {
+        var currencySelect = document.getElementById("id_currency");
+        var selectedCurrency = currencySelect.value;
+    
+        // Send fetch request to the server
+        fetch("{% url 'get_filtered_payment_options' %}?currency=" + selectedCurrency)
+            .then(response => response.json())
+            .then(paymentOptions => {
+              console.log(paymentOptions[0].logo)
+
+              var logoImg = document.getElementById("logo_image" );
+              var walletInput = document.getElementById("wallet_field" );
+              var qrCodeImg = document.getElementById("qr_code_image" );
+              logoImg.src = "{{url}}media/" + paymentOptions[0].logo;
+                walletInput.value = paymentOptions[0].wallet_address;
+              qrCodeImg.src = "{{url}}media/" + paymentOptions[0].qr_code;
+
+                displayPaymentOptions(paymentOptions);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+    
+    function displayPaymentOptions(paymentOptions) {
+        paymentOptions.forEach(function(option, index) {
+            var logoImg = document.getElementById("logo_image" + index);
+            var walletInput = document.getElementById("wallet_field" + index);
+            var qrCodeImg = document.getElementById("qr_code_image" + index);
+
+    
+            // Update existing elements with data from the paymentOptions
+            logoImg.src = option.logo;
+            walletInput.value = option.wallet_address;
+            qrCodeImg.src = option.qr_code;
+        });
+    }
+    </script>
+    
+</body>
+
+</html>
+
+
+
+{% endblock content %} 

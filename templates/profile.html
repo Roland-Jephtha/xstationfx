@@ -1,0 +1,285 @@
+
+{% extends "dashboard_new.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+  
+{% block content %} 
+
+
+
+     
+
+     
+
+     
+
+
+    
+
+    <main id="main" class="main">
+
+      
+      <div id="dash-main">
+
+
+        <div class="pagetitle">
+          <h1 style="color: rgb(235, 45, 45);">Profile</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item">Users</li>
+              <li class="breadcrumb-item active">Profile</li>
+            </ol>
+          </nav>
+        </div><!-- End Page Title -->
+
+
+        {%for message in messages%}
+
+            
+        <div class="alert alert-success alert-dismissible fade show " role="alert"  style="margin: 2%;">
+          <strong>{{message}}</strong> 
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+         {%endfor%}
+    
+        <section class="section profile" >
+          <div class="row">
+            <div class="col-xl-4">
+                
+              <div class="card" style="background-color: #042836;">
+                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+                  {%if profile.avatar %}
+                  <img src="{{profile.avatar.url}}" alt="Profile" class="rounded-circle">
+                  {%else%}
+                  <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" alt="Profile" class="rounded-circle">
+
+                  {%endif%}
+    
+                  <h2 style="color: white;">{{profile.full_name}}</h2>
+                  <h3 style="color: rgb(14, 235, 14);">verified <i class="bi bi-check-square-fill"></i> </h3> 
+                  
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="col-xl-8">
+    
+              <div class="card" style="background-color: #042836;">
+                <div class="card-body pt-3">
+                  <!-- Bordered Tabs -->
+                  <ul class="nav nav-tabs nav-tabs-bordered">
+    
+                    <li class="nav-item">
+                      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                    </li>
+    
+                    <li class="nav-item">
+                      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                    </li>
+    
+    
+                  </ul>
+                  <div class="tab-content pt-2">
+                    
+                    <div class="tab-pane fade show active profile-overview" id="profile-overview">
+    
+                      <h5 class="card-title" style="color: white;">Profile Details</h5>
+    
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label " style="color: white;">Full Name</div>
+                        <div class="col-lg-9 col-md-12" style="color: white;">{{profile.full_name}}</div>
+                      </div>
+    
+    
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label" style="color: white;">Username</div>
+                        <div class="col-lg-9 col-md-12" style="color: white;">{{profile.username}}</div>
+                      </div>
+    
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label" style="color: white;">Email</div>
+                        <div class="col-lg-9 col-md-12" style="color: white;">{{profile.email}}</div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label" style="color: white;">Phone Number</div>
+                        <div class="col-lg-9 col-md-12" style="color: white;">{{profile.phone}}</div>
+                      </div>
+
+
+                      {% comment %} <div class="row">
+                        <div class="col-lg-3 col-md-4 label" style="color: white;">State</div>
+                        <div class="col-lg-9 col-md-12" style="color: white;">{{profile.state}}</div>
+                      </div> {% endcomment %}
+
+                      
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label" style="color: white;">Country</div>
+                        <div class="col-lg-9 col-md-12" style="color: white;">{{profile.country}}</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label" style="color: white;">Address</div>
+                        <div class="col-lg-9 col-md-12" style="color: white;">{{profile.address}}</div>
+                      </div>
+
+
+
+                      {% comment %} <div class="row">
+                        <div class="col-lg-3 col-md-4 label" style="color: white;">Account Type</div>
+                        <div class="col-lg-9 col-md-12" style="color: white;">{{profile.a_type}}</div>
+                      </div> {% endcomment %}
+                      
+                   
+    
+                    </div>
+
+    
+                    <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+    
+                      <!-- Profile Edit Form -->
+                      <form method="post" enctype="multipart/form-data">
+
+
+<style>
+  #image1{
+    display: none;
+  }
+</style>
+                
+
+
+                 
+                        {%csrf_token%}
+                       
+                        
+                        <div class="mb-3 col-md-12">
+                          <label for="" style="color: white;">Profile Image: </label>
+                          <div class="col">
+                            <div class="py-2 px-1 border rounded">
+                                <label class="text-center" for="image1"
+                                >
+
+                                {% if profile.avatar %}
+
+                                    <img class="rounded" id="photo_1"  style="width: 100%;" src="{{profile.avatar.url}}" alt="upload" /></label
+                                
+                                  {% else %}
+
+                                  
+
+                                  <img class="rounded" id="photo_1"  style="height:100px" src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" alt="upload" /></label
+
+                                  {% endif %}
+                                    > 
+    
+                              {{form.avatar}} 
+                            
+                              
+                             
+                            </div>
+    
+                        </div> 
+    
+                        </div>
+    
+                        <div class="row mb-3" >
+                          <div class="col-md-8 col-lg-12"  >
+                            <label for="" style="color: white;">Full Name:</label>
+                            {{form.full_name}}
+
+
+                            <label for="" style="color: white;">Email:</label>
+                            {{form.email}}
+                            <label for="" style="color: white;">Address:</label>
+                            {{form.address}}
+                            <label for="" style="color: white;">Phone Number:</label>
+                            {{form.phone}}
+                          </div>
+                        </div>
+    
+                    
+    
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                      </form><!-- End Profile Edit Form -->
+    
+                    </div>
+
+    
+                    <div class="tab-pane fade pt-3" id="profile-settings">
+    
+                      <!-- Settings Form -->
+                      
+                    </div>
+    
+                  </div><!-- End Bordered Tabs -->
+    
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+    
+      </main>
+</div>
+</div>
+
+ 
+
+
+            
+<script>
+  function handleSubmit(){
+      const form = document.getElementById('avatarform');
+      form.addEventListener('submit', (event) =>{
+          event.preventDefault();
+          
+      });
+      form.submit();
+
+      
+  }
+
+
+  function displaySelectedImage(event, elementId, ) {
+  const selectedImage = document.getElementById(elementId);
+  const fileInput = event.target;
+  // alert(selectedImage)
+
+  if (fileInput.files && fileInput.files[0]) {
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+          selectedImage.src = e.target.result;
+      };
+
+      reader.readAsDataURL(fileInput.files[0]);
+  }
+
+  }
+
+</script>
+
+
+  
+{% endblock content %} 
+
+
+
+     
+
+     
+
+     
+
+
+    

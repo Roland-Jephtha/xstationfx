@@ -1,0 +1,117 @@
+
+{% extends "dashboard_new.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+  
+{% block content %} 
+
+
+
+     
+
+
+    <main id="main" class="main">
+
+      <div id="dash-main">
+
+
+        <div class="pagetitle">
+          <h1 style="color: rgb(235, 45, 45);">Withdraw</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+              <li class="breadcrumb-item">Users</li>
+              <li class="breadcrumb-item active">Withdraw</li>
+            </ol>
+          </nav>
+        </div><!-- End Page Title -->
+    
+
+        <section class="section profile" >
+          <div class="row">
+            <div class="col-xl-6">
+
+
+                
+              <div class="card" style="color: rgb(115, 184, 245); background-color: #042836; ">
+                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center" style="margin-top:-5%">
+                <div class="row mb-3" >
+                    <div class="col-md-8 col-lg-9">
+                        <br>
+
+                       <div class="text-center" > 
+                        <a href="{%url 'withdraw_bank'%}" class="btn btn-primary" id="withdraw_btn">
+                          <i class="bi bi-credit-card"></i>
+
+                          Bank Withdrawal
+                        </a>
+                          </div>
+               </div>
+              
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-xl-6">
+
+
+                
+              <div class="card" style="color: rgb(115, 184, 245); background-color: #042836; ">
+                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center" style="margin-top:-5%">
+
+
+
+                <div class="row mb-3" >
+
+
+
+                    <div class="col-md-8 col-lg-9">
+
+
+
+                       <br> <div class="text-center" > 
+                        <a href="{%url 'withdraw_btc'%}" class="btn btn-primary" id="withdraw_btn">
+                          <i class="bi bi-currency-bitcoin"></i>
+
+                          Crypto Withdrawal
+                        </a>
+                          </div>
+
+                       
+
+               </div>
+
+
+              
+                  </div>
+                  
+                  
+                </div>
+              </div>
+    
+            </div>
+
+          </div>
+        </section>
+
+
+        
+    
+      </main>
+</div>
+</div>
+
+
+  
+{% endblock content %} 
+
+
+
+     

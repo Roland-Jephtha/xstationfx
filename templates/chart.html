@@ -1,0 +1,369 @@
+
+{% extends "dashboard_new.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+  
+{% block content %} 
+
+
+
+     
+
+     
+
+     
+
+
+    
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+          <h1 style="color: rgb(235, 45, 45);">Trading Chart</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+              <li class="breadcrumb-item">Users</li>
+              <li class="breadcrumb-item active">chart</li>
+
+            </ol>
+          </nav>
+        </div><!-- End Page Title -->
+    
+        
+
+        <section class="section profile" >
+
+
+          
+
+   
+
+
+            <div class="row">
+              <div class="col-xl-12">
+                
+                <p style="color: red;">Live Trading</p>
+                  
+                <div class="chart" style="height: 30em;">
+                  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                  <script type="text/javascript">
+                  new TradingView.widget({
+                    "autosize": true,
+  
+  
+             
+                    "symbol": "BITSTAMP:BTCUSD",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "Dark",
+                    "style": "1",
+                    "locale": "en",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "allow_symbol_change": true,
+                    "hideideas": true
+                  });
+                  </script>
+                  <!-- TradingView Widget END -->
+  
+                </div>
+                  
+      
+              </div>
+
+      
+              <div class="col-xl-6">
+                <br> 
+
+
+                <div class="card" style="background-color: black">
+                  <div class="card-body pt-3">
+
+                    <!-- Bordered Tabs -->
+                    
+                    <div class="tab-content pt-2">
+                     <center>
+                      <p style="color: red;">Crypto Market Data</p>
+                     </center> 
+
+                      
+                    
+                      <div id="tablechart1">
+                        <div id="demo3" class="">
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container" style="width: 100%; height: 350px;">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a> by TradingView</div> -->
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                                    {
+                                        "width": "100%",
+                                        "height": "350",
+                                        "defaultColumn": "overview",
+                                        "screener_type": "crypto_mkt",
+                                        "displayCurrency": "USD",
+                                        "colorTheme": "dark",
+                                        "locale": "en"
+                                    }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+
+                    </div>
+      
+                     
+      
+                      <div class="tab-pane fade pt-3" id="profile-settings">
+      
+                        <!-- Settings Form -->
+                        
+                      </div>
+      
+                    </div><!-- End Bordered Tabs -->
+      
+                  </div>
+                </div>
+      
+              </div>
+
+
+
+              <div class="col-xl-6">
+                <br> 
+
+
+                <div class="card" style="background-color: black">
+
+                  <div class="card-body pt-3">
+                    <!-- Bordered Tabs -->
+                    
+                    <div class="tab-content pt-2">
+
+                      <center>
+                        <p style="color: red;">Stock Market Data</p>
+
+                      </center>
+
+                      
+                    
+                      <div id="tablechart2">
+                        <div id="demo1" class="">
+                            <div class="tradingview-widget-container" style="width: 100%; height: 350px;">
+                                <!-- TradingView Widget BEGIN -->
+                                <!-- <div class="tradingview-widget-container"> -->
+                                <div class="tradingview-widget-container__widget"></div>
+                                <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">stock</span></a> by TradingView</div> -->
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                                    {
+                                        "width": "100%",
+                                        "height": "350",
+                                        "symbolsGroups": [{
+                                                "name": "stock",
+                                                "symbols": [{
+                                                        "name": "NASDAQ:NDAQ",
+                                                        "displayName": "NASDAQ"
+                                                    },
+                                                    {
+                                                        "name": "NASDAQ:AAPL",
+                                                        "displayName": "APPLE STOCK"
+                                                    },
+                                                    {
+                                                        "name": "NASDAQ:GOOGL",
+                                                        "displayName": "GOOGL"
+                                                    },
+                                                    {
+                                                        "name": "NASDAQ:NVAX",
+                                                        "displayName": "NVAX NA"
+                                                    },
+                                                    {
+                                                        "name": "NASDAQ:AMZN",
+                                                        "displayName": "AMZN"
+                                                    },
+                                                    {
+                                                        "name": "NASDAQ:FB",
+                                                        "displayName": "FACEB"
+                                                    },
+                                                    {
+                                                        "name": "NASDAQ:TLSA",
+                                                        "displayName": "TLSA"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "Indices",
+                                                "originalName": "Indices",
+                                                "symbols": [{
+                                                        "name": "FOREXCOM:SPXUSD",
+                                                        "displayName": "S&P 500"
+                                                    },
+                                                    {
+                                                        "name": "FOREXCOM:NSXUSD",
+                                                        "displayName": "Nasdaq 100"
+                                                    },
+                                                    {
+                                                        "name": "FOREXCOM:DJI",
+                                                        "displayName": "Dow 30"
+                                                    },
+                                                    {
+                                                        "name": "INDEX:NKY",
+                                                        "displayName": "Nikkei 225"
+                                                    },
+                                                    {
+                                                        "name": "INDEX:DEU30",
+                                                        "displayName": "DAX Index"
+                                                    },
+                                                    {
+                                                        "name": "FOREXCOM:UKXGBP",
+                                                        "displayName": "UK 100"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "Commodities",
+                                                "originalName": "Commodities",
+                                                "symbols": [{
+                                                        "name": "CME_MINI:ES1!",
+                                                        "displayName": "S&P 500"
+                                                    },
+                                                    {
+                                                        "name": "CME:6E1!",
+                                                        "displayName": "Euro"
+                                                    },
+                                                    {
+                                                        "name": "COMEX:GC1!",
+                                                        "displayName": "Gold"
+                                                    },
+                                                    {
+                                                        "name": "NYMEX:CL1!",
+                                                        "displayName": "Crude Oil"
+                                                    },
+                                                    {
+                                                        "name": "NYMEX:NG1!",
+                                                        "displayName": "Natural Gas"
+                                                    },
+                                                    {
+                                                        "name": "CBOT:ZC1!",
+                                                        "displayName": "Corn"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "Bonds",
+                                                "originalName": "Bonds",
+                                                "symbols": [{
+                                                        "name": "CME:GE1!",
+                                                        "displayName": "Eurodollar"
+                                                    },
+                                                    {
+                                                        "name": "CBOT:ZB1!",
+                                                        "displayName": "T-Bond"
+                                                    },
+                                                    {
+                                                        "name": "CBOT:UB1!",
+                                                        "displayName": "Ultra T-Bond"
+                                                    },
+                                                    {
+                                                        "name": "EUREX:FGBL1!",
+                                                        "displayName": "Euro Bund"
+                                                    },
+                                                    {
+                                                        "name": "EUREX:FBTP1!",
+                                                        "displayName": "Euro BTP"
+                                                    },
+                                                    {
+                                                        "name": "EUREX:FGBM1!",
+                                                        "displayName": "Euro BOBL"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "Forex",
+                                                "originalName": "Forex",
+                                                "symbols": [{
+                                                        "name": "FX:EURUSD"
+                                                    },
+                                                    {
+                                                        "name": "FX:GBPUSD"
+                                                    },
+                                                    {
+                                                        "name": "FX:USDJPY"
+                                                    },
+                                                    {
+                                                        "name": "FX:USDCHF"
+                                                    },
+                                                    {
+                                                        "name": "FX:AUDUSD"
+                                                    },
+                                                    {
+                                                        "name": "FX:USDCAD"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "showSymbolLogo": true,
+                                        "colorTheme": "dark",
+                                        "isTransparent": false,
+                                        "locale": "en"
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+      
+                     
+      
+                      <div class="tab-pane fade pt-3" id="profile-settings">
+      
+                        <!-- Settings Form -->
+                        
+                      </div>
+      
+                    </div><!-- End Bordered Tabs -->
+      
+                  </div>
+                </div>
+      
+              </div>
+
+
+              
+
+
+
+
+
+
+
+          </div>
+        </section>
+
+
+
+
+        
+
+        
+    
+      </main>
+</div>
+
+
+    
+      
+    {% endblock content %} 
+    
+    
+    
+         
+    
+         
+    
+         
+    
+    
+        
+

@@ -1,0 +1,144 @@
+
+{% extends "dashboard_new.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+  
+{% block content %} 
+
+
+
+     
+
+
+    <main id="main" class="main">
+
+
+
+        <div class="pagetitle" id="depo-form">
+          <h1 style="color: rgb(235, 45, 45);">Crypto Withdrawal</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+              <li class="breadcrumb-item">Users</li>
+              <li class="breadcrumb-item active">Withdraw</li>
+              <li class="breadcrumb-item active">Crypto</li>
+            </ol>
+          </nav>
+        </div><!-- End Page Title -->
+    
+
+        <section class="section profile" >
+          <div class="row">
+            <div class="col-xl-6" id="depo-form">
+
+              {%for message in messages%}
+
+            
+              <div class="alert alert-success alert-dismissible fade show " role="alert"  style="margin: 2%;">
+                <strong>{{message}}</strong> 
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+               {%endfor%}
+                
+              <div class="card" style="color: rgb(115, 184, 245); background-color: #042836; border-radius:5%; ">
+                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center" style="margin-top:-5%; ">
+
+
+                  <form method="POST"  class="mt-4 login-form" enctype="multipart/form-data" onsubmit="SubmitForm()">
+
+                    {%csrf_token%}
+                <div class="row mb-3" >
+
+                  <div class="col-md-6 col-lg-12"  >
+
+                    
+                      <label for="">Currency:</label>
+                    {{withdraw_form.currency}}
+                    <label for="">Amount in dollar($):</label>
+                    {{withdraw_form.amount}}
+                    <label for="">Wallet Address:</label>
+                    {{withdraw_form.wallet_address}}                 
+                    {{withdraw_form.user}}                 
+                   </div>
+
+                    <div class="col-md-8 col-lg-9">
+
+
+
+                       <br> <div class="text-center" > 
+                            <button type="submit" class="btn btn-primary withdraw_btn" >Withdraw</button>
+                          </div>
+
+                       
+
+               </div>
+
+
+              
+                  </div>
+                </form>
+                  
+                  <!-- <h3>Web Designer</h3> -->
+                  
+                </div>
+              </div>
+    
+            </div>
+<!--     
+            <div class="col-xl-8">
+    
+              <div class="card" style="background-color: #10141b;">
+                <div class="card-body pt-3">
+
+              <p style = "color:rgb(168, 159, 159);">copy the wallet address on this section and paste in the wallet address field.</p>    
+
+                  <strong style="color:rgb(168, 159, 159);">wallet Address :</strong> 
+
+                  <br> <br>
+                  <h3 style="color:rgb(255, 255, 253);">typgkvngjrmfkfmvfkfmffkvmjfkvmkfmvkvmkfkvmvkf</h3>
+            
+    
+                </div>
+              </div>
+    
+            </div> -->
+          </div>
+        </section>
+
+
+        
+    
+      </main>
+</div>
+
+
+
+  
+{% endblock content %} 
+
+
+
+     
+
+
+
+  <script>
+
+
+    function SubmitForm(){
+ 
+      alert("Withdrawal is being processed")
+      
+    }
+
+  </script>
+
+</body>
+
+</html>
+
