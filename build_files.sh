@@ -9,7 +9,7 @@ python3.9 -m venv venv
 source venv/bin/activate
 
 # Upgrade pip
-pip install --upgrade pip
+# pip install --upgrade pip
 
 # Install dependencies
 pip install -r requirements.txt
