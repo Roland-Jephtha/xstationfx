@@ -389,11 +389,11 @@ def signup(request):
                         
                     )
 
-                    subject = 'Welcome to Heritage Finance Network'
+                    subject = 'Welcome to Xstationfx'
                     email_from = settings.EMAIL_HOST_USER
                     msg_html = render_to_string('email.html', {"username":username})
-                    message = f'''Hi {username}, thank you for registering On Heritage Finance Network. Your Account Has Been Successful Created. Please Do Not Share Your Details With Anyone'''
-                    send_mail( "Heritage Finance Network", message, email_from, [email], html_message=msg_html)
+                    message = f'''Hi {username}, thank you for registering On Xstationfx. Your Account Has Been Successful Created. Please Do Not Share Your Details With Anyone'''
+                    send_mail( "Xstationfx", message, email_from, [email], html_message=msg_html)
                     
                     
 

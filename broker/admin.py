@@ -58,5 +58,5 @@ admin.site.register(Withdraw_bank)
 
 
 
-admin.site.site_header = "Heritage Finance Network"
-admin.site.index_title = "Manage Heritage Finance Network"
+admin.site.site_header = "Xstationfx"
+admin.site.index_title = "Manage Xstationfx"

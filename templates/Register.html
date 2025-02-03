@@ -9,24 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Primary Meta Tags -->
-    <title> Bitcoin Suisse — Forex/CFDs Trading Your Online Broker</title>
-    <meta name="title" content=" Bitcoin Suisse — Forex/CFDs Trading Your Online Broker">
-    <meta name="description" content=" Bitcoin Suisse - is your world largest cryptocurrency online trading and investment platform.Trade Forex/CFDs all on our advanced, web-based trading platform.We apply a 100% DMA STP order execution model for all our clients.">
+    <title> XstationFX</title>
+    <meta name="title" content=" XstationFX — Forex/CFDs Trading Your Online Broker">
+    <meta name="description" content=" XstationFX - is your world largest cryptocurrency online trading and investment platform.Trade Forex/CFDs all on our advanced, web-based trading platform.We apply a 100% DMA STP order execution model for all our clients.">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bicoinsuisses.com/">
-    <meta property="og:title" content=" Bitcoin Suisse — Forex/CFDs Trading Your Online Broker">
-    <meta property="og:description" content=" Bitcoin Suisse - is your world largest cryptocurrency online trading and investment platform.Trade Forex/CFDs all on our advanced, web-based trading platform.We apply a 100% DMA STP order execution model for all our clients.">
-    <meta property="og:image" content="https://bicoinsuisses.com/Stockryptos01.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://bicoinsuisses.com/">
-    <meta property="twitter:title" content=" Bitcoin Suisse — Forex/CFDs Trading Your Online Broker">
-    <meta property="twitter:description" content=" Bitcoin Suisse - is your world largest cryptocurrency online trading and investment platform.Trade Forex/CFDs all on our advanced, web-based trading platform.We apply a 100% DMA STP order execution model for all our clients.">
-    <meta property="twitter:image" content="https://bicoinsuisses.com/Stockryptos01.png">
-    <link rel="icon" href="/mini.png" type="image/x-icon">
+   
 
     <link href="/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
@@ -35,7 +23,7 @@
 <body id="dark">
     <header class="dark-bb">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="/"> <h3 style="color: white;">XstationFX</h3> 
+            <a class="navbar-brand" href="/"> <h3 style="color: white;">XstationFX</h3> </a>
 
 
 
@@ -44,7 +32,12 @@
 
     <div class="vh-100 d-flex justify-content-center">
         <div class="form-access my-auto">
-            <form method="post" >
+            {% for message in messages %}
+
+            <h5 style="color: #f5f5f5;">{{message}}</h5>
+
+            {% endfor %}
+            <form method="post" action="">
                 {% csrf_token %}
                 <span>Create Account</span>
                 <div class=" validation-summary-valid" data-valmsg-summary="true">
@@ -54,7 +47,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Full Name" data-val="true" data-val-required="The Full Name field is required." id="FullName" name="full_name" value="" required>
+                    <input type="text" class="form-control" placeholder="Full Name" id="FullName" name="full_name" value="" required>
                 </div>
                 <span class="text-danger field-validation-valid" data-valmsg-for="FullName" data-valmsg-replace="true"></span>
 

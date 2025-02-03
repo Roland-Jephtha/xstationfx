@@ -2349,17 +2349,21 @@ ul.footer-links li a:hover {
 }
 
 .hero-bg-1 {
-    background-image: url('../img/hero-bg.jpg');
+    background-image: url('../img/img2.jpg');
     background-size: cover;
 }
 
 .hero-bg-2 {
-    background-image: url('../img/tdpic.jpg');
+    background-image: url('../img/img4.jpg');
     background-size: cover;
 }
 
 .hero-bg-3 {
-    background-image: url('../img/fp-section-live-prices-1.png');
+    background-image: url('../img/img5.jpg');
+    background-size: cover;
+}
+.hero-bg4{
+    background-image: url('../img/img1.jpg');
     background-size: cover;
 }
 

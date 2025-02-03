@@ -8,27 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Primary Meta Tags -->
-    <title> Bitcoin Suisse — Forex/CFDs Trading Your Online Broker</title>
-    <meta name="title" content=" Bitcoin Suisse — Forex/CFDs Trading Your Online Broker">
-    <meta name="description" content=" Bitcoin Suisse - is your world largest cryptocurrency online trading and investment platform.Trade Forex/CFDs all on our advanced, web-based trading platform.We apply a 100% DMA STP order execution model for all our clients.">
+    <title> XstationFX — Forex/CFDs Trading Your Online Broker</title>
+    <meta name="title" content=" XstationFX — Forex/CFDs Trading Your Online Broker">
+    <meta name="description" content=" XstationFX - is your world largest cryptocurrency online trading and investment platform.Trade Forex/CFDs all on our advanced, web-based trading platform.We apply a 100% DMA STP order execution model for all our clients.">
 
     <!-- Open Graph / Facebook -->
     <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" media="all" href="{% static 'css/fontawesome.min7eda.css' %}" />
     <link rel="stylesheet" media="all" href="{% static 'css/flaticon7eda.css' %}" />
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bicoinsuisses.com/">
-    <meta property="og:title" content=" Bitcoin Suisse — Forex/CFDs Trading Your Online Broker">
-    <meta property="og:description" content=" Bitcoin Suisse - is your world largest cryptocurrency online trading and investment platform.Trade Forex/CFDs all on our advanced, web-based trading platform.We apply a 100% DMA STP order execution model for all our clients.">
-    <meta property="og:image" content="https://bicoinsuisses.com/Stockryptos01.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://bicoinsuisses.com/">
-    <meta property="twitter:title" content=" Bitcoin Suisse — Forex/CFDs Trading Your Online Broker">
-    <meta property="twitter:description" content=" Bitcoin Suisse - is your world largest cryptocurrency online trading and investment platform.Trade Forex/CFDs all on our advanced, web-based trading platform.We apply a 100% DMA STP order execution model for all our clients.">
-    <meta property="twitter:image" content="https://bicoinsuisses.com/Stockryptos01.png">
-    <link rel="icon" href="/mini.png" type="image/x-icon">
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
     <script src="{% static 'js/assets/bootstrap.min3860.js' %}" type="text/javascript"></script>
 
@@ -46,6 +34,12 @@
     </header>
 
     <div class="vh-100 d-flex justify-content-center">
+
+        {% for message in messages %}
+
+        <h5 style="color: #f5f5f5;">{{message}}</h5>
+
+        {% endfor %}
         <div class="form-access my-auto">
             <form method="post" >
 
