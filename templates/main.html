@@ -132,8 +132,12 @@
 			<div class="footer-bottom">
 				<span>
 
-					<center> <p>	Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-						 All rights reserved </p> </center>
+					<p>Copyright &copy; <span id="year"></span></p>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 				</span>
 		
 			</div>
