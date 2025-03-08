@@ -127,14 +127,14 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR/"static")
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR/"static")
+]
 
 
 
 # STATIC_ROOT = os.path.join(BASE_DIR/ 'staticfiles_build', 'static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
@@ -144,6 +144,17 @@ AUTH_USER_MODEL = 'broker.CustomUser'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+
+
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    messages.SUCCESS: 'success',
+}
 
 
 

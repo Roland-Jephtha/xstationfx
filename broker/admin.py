@@ -55,6 +55,8 @@ admin.site.register(Deposit)
 admin.site.register(Withdraw)
 admin.site.register(Payment)
 admin.site.register(Withdraw_bank)
+admin.site.register(CopyTrade)
+admin.site.register(Online_Training)
 
 
 

@@ -9,6 +9,7 @@ urlpatterns = [
     path('dashboard', dashboard, name='dashboard'),
     path('about', about, name='about'),
     path('deposit', deposit, name='deposit'),
+    path('copy_trade', copy_trade, name='copy_trade'),
     path('withdraw_crypto', withdraw_btc, name='withdraw_btc'),
     path('withdraw_bank', withdraw_bank, name='withdraw_bank'),
     path('withdraw', withdraw, name='withdraw'),
@@ -22,6 +23,7 @@ urlpatterns = [
     path('assets', assets, name='assets'),
     path('chart', chart, name='chart'),
     path('transaction', transactions, name='transaction'),
+    path('online_training', training, name='online_training'),
     path('get-filtered-payment-options/', get_filtered_payment_options, name='get_filtered_payment_options'),
     
     path('password-reset/', auth_views.PasswordResetView.as_view(form_class=CustomPasswordResetForm,

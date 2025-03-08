@@ -20,6 +20,9 @@ from django.conf import settings
 
 from django.contrib.auth.views import PasswordResetView
 
+from django.http import HttpResponse
+from django.template.loader import render_to_string
+
 
 
 
@@ -329,6 +332,57 @@ def withdraw(request):
     return render(request, 'withdraw.html', context)
 
 
+
+
+
+@login_required(login_url="signin")
+def copy_trade(request):
+    user_profile = Profile.objects.get(user=request.user)
+    
+    if request.method == 'POST':
+        trader = request.POST.get('trader')
+        investment = int(request.POST.get('investment'))
+
+        # Check if investment is less than $10
+        if investment < 10:
+            context = {
+                'error': "Minimum investment is $10."
+            }
+            return HttpResponse(render_to_string('copy_trades.html', context))  # Render error message
+
+        # Check if the investment is greater than the user's available balance
+        if investment > user_profile.balance:
+
+            messages.error(request, "Insufficient funds for this investment.")
+            return redirect('copy_trade')
+        
+        else:
+            # Update the user's balance and profit
+            user_profile.balance -= investment
+            user_profile.save()
+
+            copy_trade = CopyTrade(
+                user = user_profile,
+                trader = trader,
+                amount = investment
+            )
+
+            copy_trade.save()
+
+            messages.error(request, f"You are now copying { trader } with an investment of ${ investment }.")
+            return redirect('copy_trade')
+
+
+    copy_trades = CopyTrade.objects.filter(user=user_profile)
+
+    # Initial GET request: render the form
+    context = {
+        'profile': user_profile,  # Include user profile data in the context if needed
+        'copy_trades': copy_trades
+    }
+    return render(request, 'copy_trades.html', context)
+
+
 @login_required(login_url="signin")
 
 def chart(request):
@@ -534,6 +588,17 @@ def terms(request):
 
 def assets(request):
     return render(request, 'Assets.html')
+
+ 
+
+def training(request):
+
+    online_training = Online_Training.objects.all()
+
+    context = {
+        'online_training': online_training
+    }
+    return render(request, 'training.html', context)
 
  
 

@@ -1,0 +1,428 @@
+
+
+
+{% extends "dashboard_new.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+  
+{% block content %} 
+
+
+
+     
+
+     
+
+  
+<script src="https://unpkg.com/htmx.org@1.7.0"></script> <!-- HTMX script -->
+
+
+
+    <main id="main" class="main">
+
+      <div id="dash-main">
+
+
+      {%for message in messages%}
+
+            
+      <div class="alert alert-success alert-dismissible fade show " role="alert"  style="margin: 2%;">
+        <strong>{{message}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+       {%endfor%}
+
+        <div class="pagetitle">
+          <h1 style="color: rgb(235, 45, 45);">Copy Trades</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{%url 'home'%}">Home</a></li>
+              <li class="breadcrumb-item">Users</li>
+              <li class="breadcrumb-item active">Copy Trades</li>
+            </ol>
+          </nav>
+        </div><!-- End Page Title -->
+    
+
+        <section class="section profile"  >
+          <div class="row">
+            <div class="col-xl-6">
+
+        
+                
+              <div class="card" style="background-color: #042836; border-radius:10px">
+                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center" style="margin-top:-5%">
+
+
+                  <form method="POST"  class="mt-4 login-form" enctype="multipart/form-data">
+
+                    <!-- <form id="copyTradeForm" hx-post="{% url 'copy_trade' %}" hx-target="#tradeStatus" hx-swap="outerHTML"> -->
+                            {% csrf_token %}
+                
+                    <div class="row mb-3"  style="color: rgb(115, 184, 245); padding-left:4%; padding-right:4%; padding-top: 5%;">
+                    
+                    <div class="copy-trading-widget">
+                        <label for="trader">Select a Trader:</label>
+                        <select id="trader" class="form-control"name="trader" required>
+                            <option value="Paul Tudor Jones" data-success-rate="85%">Paul Tudor Jones - 85% Success</option>
+                            <option value="George Soros" data-success-rate="90%">George Soros - 90% Success</option>
+                            <option value="Jesse Livermore" data-success-rate="80%">Jesse Livermore - 80% Success</option>
+                            <option value="Stanley Druckenmiller" data-success-rate="87%">Stanley Druckenmiller - 87% Success</option>
+                            <option value="Ray Dalio" data-success-rate="88%">Ray Dalio - 88% Success</option>
+                            <option value="Ed Seykota" data-success-rate="92%">Ed Seykota - 92% Success</option>
+                            <option value="Richard Dennis" data-success-rate="75%">Richard Dennis - 75% Success</option>
+                            <option value="Larry Hite" data-success-rate="89%">Larry Hite - 89% Success</option>
+                            <option value="Tom Basso" data-success-rate="80%">Tom Basso - 80% Success</option>
+                            <option value="Bruce Kovner" data-success-rate="91%">Bruce Kovner - 91% Success</option>
+                            <option value="David Tepper" data-success-rate="85%">David Tepper - 85% Success</option>
+                            <option value="Ken Griffin" data-success-rate="93%">Ken Griffin - 93% Success</option>
+                            <option value="Stephen A. Cohen" data-success-rate="82%">Stephen A. Cohen - 82% Success</option>
+                            <option value="John Paulson" data-success-rate="76%">John Paulson - 76% Success</option>
+                            <option value="Jim Simons" data-success-rate="92%">Jim Simons - 92% Success</option>
+                            <option value="Michael Burry" data-success-rate="84%">Michael Burry - 84% Success</option>
+                            <option value="Carl Icahn" data-success-rate="79%">Carl Icahn - 79% Success</option>
+                            <option value="Bill Lipschutz" data-success-rate="86%">Bill Lipschutz - 86% Success</option>
+                            <option value="Tom Sosnoff" data-success-rate="88%">Tom Sosnoff - 88% Success</option>
+                            <option value="Mike Novogratz" data-success-rate="75%">Mike Novogratz - 75% Success</option>
+                        </select> <br>
+                        
+                        
+                        <label for="investment">Investment Amount ($):</label>
+                        <input type="number" id="investment" min="10" step="10" placeholder="$10" class="form-control" name="investment" required> <br>
+                        
+                        
+                        
+                    </div>
+                    <div class="col-md-8 col-lg-9">
+
+
+
+                       <br> <div class="text-center" > 
+                        <button id="copyTrade" class="btn btn-primary withdraw_btn">Start Copying</button>
+                          </div>
+
+                       
+
+               </div>
+
+
+              
+                  </div>
+                </form>
+                  
+                  <!-- <h3>Web Designer</h3> -->
+                  
+                </div>
+              </div>
+    
+            </div>
+       
+    
+            <div class="col-xl-6" >
+    
+              <div class="card" style="background-color: #10141b; padding-left: 1%;">
+                <div class="card-body pt-3">
+
+
+             
+              <div id="tradeStatus" style="color: rgb(103, 103, 219);"></div>
+                        
+
+              <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+    {
+    "width": "100%",
+    "height": 300,
+    "defaultColumn": "overview",
+    "defaultScreen": "general",
+    "market": "forex",
+    "showToolbar": true,
+    "colorTheme": "dark",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+            </div>
+            </div>
+            </div>
+
+
+
+            <div class="col-xl-6" >
+    
+              <div class="card" style="background-color: #10141b; padding-left: 5%;">
+                <div class="card-body pt-3">
+
+
+             
+              <div id="tradeStatus" style="color: rgb(103, 103, 219);"></div>
+                        
+              <h3 style = "color:rgb(168, 159, 159);"> Trading Updates</h3>
+              <ul id="tradeUpdates" style="color: rgb(64, 216, 64);"></ul>
+
+            </div>
+            </div>
+            </div>
+<br><br>
+
+            <div class="col-xl-6" >
+    
+              <div class="card" style="background-color: #10141b; padding-left: 5%;">
+                     <table class="table table-borderless datatabl" style=" color:white">
+                  <thead>
+                    <tr>
+                      <th scope="col">Trader</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Time</th>
+                      <!-- <th scope="col">Status</th> -->
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    {% for trade in copy_trades reversed%}
+                    <tr>
+                      <td>{{trade.trader}}</td>
+                      <td>${{trade.amount}}</td>
+                      <td><a href="#" class="text-primary">{{trade.created_at}}</a></td>
+
+      
+
+
+
+                    </tr>
+                    {%endfor%}
+                    
+                  </tbody>
+                </table>
+
+            </div>
+            </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        
+    
+      </main>
+</div>
+</div>
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+  
+
+
+
+
+
+<style>
+
+#tradeUpdates {
+    /* list-style-type: none; */
+    padding: 0;
+}
+
+#tradeUpdates li {
+    /* background-color: #f4f4f4; */
+    padding: 10px;
+    margin: 5px 0; /* Space between list items */
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Add extra space between items by increasing margin-bottom */
+#tradeUpdates li + li {
+    margin-top: 10px; /* Space after each item */
+}
+
+#tradeUpdates li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+  <script>
+     function copyText(){
+      let text_field = document.getElementById("wallet_field");
+      text_field.select();
+      document.execCommand("copy");
+      alert("Text copied to clipboard!")
+    }
+
+    function SubmitForm(){
+ 
+      alert("Deposit is being processed")
+      
+    }
+
+  </script>
+
+
+  <style>
+    #wallet_field{
+      height: 40px;
+      border-radius: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function updatePaymentOptions() {
+        var currencySelect = document.getElementById("id_currency");
+        var selectedCurrency = currencySelect.value;
+    
+        // Send fetch request to the server
+        fetch("{% url 'get_filtered_payment_options' %}?currency=" + selectedCurrency)
+            .then(response => response.json())
+            .then(paymentOptions => {
+              console.log(paymentOptions[0].logo)
+
+              var logoImg = document.getElementById("logo_image" );
+              var walletInput = document.getElementById("wallet_field" );
+              var qrCodeImg = document.getElementById("qr_code_image" );
+              logoImg.src = "{{url}}media/" + paymentOptions[0].logo;
+                walletInput.value = paymentOptions[0].wallet_address;
+              qrCodeImg.src = "{{url}}media/" + paymentOptions[0].qr_code;
+
+                displayPaymentOptions(paymentOptions);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+    
+    function displayPaymentOptions(paymentOptions) {
+        paymentOptions.forEach(function(option, index) {
+            var logoImg = document.getElementById("logo_image" + index);
+            var walletInput = document.getElementById("wallet_field" + index);
+            var qrCodeImg = document.getElementById("qr_code_image" + index);
+
+    
+            // Update existing elements with data from the paymentOptions
+            logoImg.src = option.logo;
+            walletInput.value = option.wallet_address;
+            qrCodeImg.src = option.qr_code;
+        });
+    }
+    </script>
+    
+
+
+
+    <script>
+        document.getElementById("copyTrade").addEventListener("click", function() {
+            let trader = document.getElementById("trader").value;
+            let investment = document.getElementById("investment").value;
+        
+            if (investment < 10) {
+                alert("Minimum investment is $10.");
+                return;
+            }
+        
+            document.getElementById("tradeStatus").innerHTML = 
+                `You are now copying ${trader} with an investment of $${investment}.`;
+        });
+        
+        const traders = [
+            { name: "Paul Tudor Jones", broker: "Interactive Brokers", successRate: "85%", details: "Macro trading expert" },
+            { name: "George Soros", broker: "Soros Fund Management", successRate: "90%", details: "Currency market legend" },
+            { name: "Warren Buffett", broker: "Berkshire Hathaway", successRate: "95%", details: "Long-term value investor" },
+            { name: "Ray Dalio", broker: "Bridgewater Associates", successRate: "88%", details: "Hedge fund pioneer" },
+            { name: "Carl Icahn", broker: "Icahn Enterprises", successRate: "82%", details: "Activist investor" },
+            { name: "Stanley Druckenmiller", broker: "Duquesne Capital", successRate: "87%", details: "Equity and bond trader" },
+            { name: "Jesse Livermore", broker: "Historical Legend", successRate: "80%", details: "Stock market speculator" },
+            { name: "John Paulson", broker: "Paulson & Co.", successRate: "83%", details: "Subprime mortgage crisis winner" },
+            { name: "Jim Simons", broker: "Renaissance Technologies", successRate: "92%", details: "Quantitative trading guru" },
+            { name: "Michael Burry", broker: "Scion Asset Management", successRate: "89%", details: "Predicted 2008 crash" }
+        ];
+        
+        const actions = ["BUY", "SELL"];
+        const assets = ["EUR/USD", "BTC/USD", "ETH/USD", "AAPL", "GOOGL"];
+        
+        function generateRandomTrade() {
+            let randomTrader = traders[Math.floor(Math.random() * traders.length)];
+            let randomAction = actions[Math.floor(Math.random() * actions.length)];
+            let randomAsset = assets[Math.floor(Math.random() * assets.length)];
+            let randomAmount = (Math.random() * 1000 + 50).toFixed(2);
+            
+            return `${randomTrader.name} (${randomTrader.broker}) executed ${randomAction} on ${randomAsset} with $${randomAmount}. Success Rate: ${randomTrader.successRate}. ${randomTrader.details}`;
+        }
+        
+        function updateTradeFeed() {
+            let tradeUpdates = document.getElementById("tradeUpdates");
+            let newTrade = document.createElement("li");
+            newTrade.textContent = generateRandomTrade();
+            
+            // Add the new trade item
+            tradeUpdates.prepend(newTrade);
+            
+            // Add the animation class to make it pop
+            setTimeout(() => {
+                newTrade.classList.add("show");
+            }, 10);
+            
+            // Limit the number of items to 10
+            if (tradeUpdates.children.length > 10) {
+                tradeUpdates.removeChild(tradeUpdates.lastChild);
+            }
+        }
+        
+        // Update trade feed every 3 seconds
+        setInterval(updateTradeFeed, 3000);
+        
+        
+        
+        </script>
+
+
+</body>
+
+</html>
+
+
+
+{% endblock content %} 
+
+
+
+
+
+
